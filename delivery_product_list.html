@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Delivery - Intro </title>
+	<!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	
+	<style>
+	
+input[type="checkbox"][id^="cb"] {
+  display: none;
+}
+
+label {
+ 
+ 
+  display: block;
+  position: relative;
+
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+label::before {
+    z-index: 9990;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    border: 1px solid #DDDDDD;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    /* transition-duration: 0.4s; */
+    transform: scale(1);
+}
+
+.odd label::before
+{
+		 top: -20px;
+}
+
+
+
+
+
+:checked+label::before {
+  content: url('images/ico/Group_1162.svg');
+ border:none;
+  transform: scale(1);
+}
+
+:checked+label img {
+  //transform: scale(0.9);
+
+  z-index: -1;
+}
+	.quantity
+	{
+		width:40%;
+		border:none;
+		background-color:transparent;
+		text-align:center;
+	
+	}
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	
+	.cart
+	{
+		margin-top:10px;
+	}
+	.qty_label span
+	{
+		font-family: 'Sarabun Medium';
+		font-size:13px;
+		color:#000000;
+		opacity:0.3;
+	}
+	.qty_entry .add_remove
+	{
+	   margin: 0px 5px;
+    padding: 2px;
+    background: #F7F7F7;
+    border-radius: 5px;
+	}
+	.add_remove .add_qty
+	{
+		width:30%;
+		float:right;
+	}
+	.add_remove .remove_qty
+	{
+		width:30%;
+		float:left;
+	}
+	.add_remove .remove_qty img
+	{
+		width:13px;
+		
+	}
+	.add_remove .add_qty img
+	{
+		width:10px;
+		
+	}
+	
+	.add_remove .qty
+	{
+		width:40%;
+		
+	}
+	.col-sm-3
+	{
+		padding:0px 5px;
+	}
+	.home_icon
+		{
+			display:none;
+		}
+	.modal-dialog {
+		width: 500px!important;
+		margin: 30px auto;
+	}
+	.action {
+        text-align: center;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    padding: 15px;
+	}
+	
+	.card_content.mob
+	{
+		display:none;
+		
+	}	
+	.card_content.desk
+	{
+		display:block;
+	}
+	.action img
+	{
+		width:100%;
+	
+	}
+	#product_list .card_content 
+	{
+		font-family: 'Sarabun Medium';
+		font-size:16px;
+		color:#333333;
+		text-align:center;
+		margin:0 auto;
+		height: 75px;
+	}
+	#product_list .card
+	{
+			margin:0 auto;
+			text-align:center;
+	}
+	
+	#product_list .card .desc
+	{
+		font-size:14px;
+	}
+	.view_invoice
+	{
+	
+		text-align:center;
+		width:100%;
+	}
+	@media (min-width: 768px)
+	
+	.modal-dialog {
+		width: 500px!important;
+		margin: 30px auto;
+	}
+	.modal-footer {
+		
+		border-top:none;
+	}
+	.modal-header {
+		
+		border-bottom:none;
+	}
+	
+	.product_dtl 
+	{
+		list-style-type:none;
+		padding-left:0px;
+	}
+	.product_dtl li
+	{
+		list-style-type:none;
+		
+	}
+	#highlights li::before
+	{
+		content:"-";
+	}
+	
+	.product_dtl li 
+	{
+		font-family: 'Sarabun';
+		font-size:15px;
+		color:#666666;
+		
+	}
+	
+	.product_dtl p 
+	{
+		font-family: 'Sarabun SemiBold';
+		font-size:product_dtl;
+		color:#333333;
+		opacity:0.3;
+		
+	}
+	.carousel-inner .item img
+	{
+		width:25%;
+		margin:0 auto;
+	}
+	.carousel-control
+	{
+		background-image:none;
+		opacity:1!important;
+		left: -15px;
+	}
+	.carousel-control.right, .carousel-control.left
+	{
+		background-image:none;
+		opacity:1!important;
+		
+	}
+	.carousel-indicators li
+	{
+		background:#e4e4e4;
+		border:none;
+		 width: 8px!important;
+		height: 8px!important;
+		  
+	}
+	.carousel-indicators .active
+	{
+		background:#DECC62;
+		border:none;
+		 width: 8px!important;
+		height: 8px!important;
+		margin:1px;
+		  
+	}
+	.carousel-inner
+	{
+		margin-bottom:70px;
+	}
+	
+	.carousel-indicators
+	{
+		bottom:-60px;
+	}
+	.fa-angle-left,.fa-angle-right
+	{
+			font-size:40px;
+			top:50%;
+			color:#DECC62;
+			
+			text-shadow:none;
+			position: absolute;
+	}
+	.modal-backdrop.in
+	{
+		<!-- opacity:1; -->
+		<!-- background:#fff; -->
+	}
+	.modal-content
+	{
+		box-shadow:none;
+		border:none;
+	}
+	
+	
+	@media (max-width: 767px)
+	{
+	.modal-dialog 
+	{
+		width: 100%!important; 
+	}
+	
+	.proceed_act
+	{
+		display:none;
+	}
+	.col-xs-6
+	{
+		padding:10px;
+	}
+	.right_divs	
+	
+	{
+		display:none;
+	}
+	body
+	{
+		background: #00998E;
+	}
+	.view_invoice
+	{
+		display:none;
+	}
+	#main-menu
+		{
+			display:none;
+		}
+		#about
+		{
+				padding-top:15px;
+		}
+		.home_icon
+		{
+			display:inline-block;
+			float:left;
+			margin-top:-5px;
+			
+		}
+		.home_icon img
+		{
+			 transform: rotateY(-180deg);
+			
+		}
+		   
+		.card_content.mob
+	{
+		display:block;
+		color:#00BBB4!important;
+	}	
+	.card_content.desk
+	{
+		display:none;
+	}
+		.left_div h2 {
+    text-align: center;
+    color: #fff!important;
+    font-family: 'Sarabun SemiBold';
+    font-size: 18px;
+}
+
+
+
+	}
+	</style>
+	
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav left_menu" style="float:left">
+                        <li class="scroll "><a href="index.html"><img src="images/ico/home.svg" > &nbsp Home</a></li>
+                        <li class="scroll"><a href="buy_gold_enter_amt.html"><img src="images/ico/gold-bars_menu.svg" > &nbsp Buy</a></li>
+                        <li class="scroll"><a href="gift_intro.html"><img src="images/ico/gift.svg" > &nbsp Gift</a></li>
+                        <li class="scroll"><a href="sell_gold_enter_amt.html"><img src="images/ico/gold-bars_menu.svg" > &nbsp Sell</a></li>
+                        <li class="scroll active"><a href="delivery_intro.html"><img src="images/ico/delivery-truck.svg" > &nbsp Delivery</a></li>
+						
+                        <li class="scroll"><a href="#savings Plan">Savings Plan</a></li>
+                  
+                    </ul>
+					
+					<ul class="nav navbar-nav responsive" style="float:left;display:none" id="sidebar">
+					
+                        <li class="scroll " id="user_name" style=""><a href="">&nbsp Gaurav Mathur</a></li>
+                        <li class="scroll " style="color:#00BBB4; font-size:12px"><a href=""  style="color:#00BBB4; font-size:12px">&nbsp View Profile <img src="images/ico/Path_841.svg"></a></li>
+                        <li class="scroll "><a href="index.html"> &nbsp Home</a></li>
+                        <li class="scroll"><a href="my_order_buy.html"> &nbsp My Orders</a></li>
+						  <li class="scroll"><a href="savings Plan"> &nbsp Gold Savings Plan</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp consolidate Wallets</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Help & Support</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Settings</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Logout</a></li>
+						
+						<br>
+                      <li class="scroll terms"><a href=""></i> &nbsp Term of service</a></li>
+                      <li class="scroll terms"><a href=""></i> &nbsp Privacy Policy</a></li>
+                      <li class="scroll terms"><a href=""></i> &nbsp @2019 SafeGold</a></li>
+                      
+                  
+                    </ul>
+					
+					 <ul class="nav navbar-nav right_nav" style="float:right">
+                        <li class="scroll"><a href="#Help & Support">Help & Support</a></li>
+                      
+						<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div  class="user_crl"><img src="images/ico/user.svg"></div>&nbsp <img src="images/ico/keyboard-left-arrow-button_dwn.svg"></a>
+							  <ul class="dropdown-menu">
+								<li><a href="my_order_buy.html">My Orders</a></li>
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								 </ul>
+						</li>
+
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="about">
+        <div class="container">
+
+        
+
+            <div class="row">
+			
+                <div class="col-sm-8 wow fadeInLeft left_div"  >
+                    <h2 class="" style="color:#333333;margin-bottom:30px;"> <a href="delivery_intro.html"><span class="home_icon" style="color:#fff;font-size:24px;"><img src="images/ico/arrow-right-white.svg"><span></a> Select a coin</h2>
+
+					
+					<div style="margin-top:20px;">
+					
+					
+						<div class="row" id="product_list">
+						
+						
+						<div class="col-sm-3 col-xs-6 wow fadeInRight product_list_cols">
+							<input type="checkbox" id="cb1" />
+						<label for="cb1">
+								<div class="card  ">
+								<div class="card_content desk">1gm SafeGold <br> Gold Coin</div>
+							<a href="" class="card_content mob " data-toggle="modal" data-target="#myModal">1gm SafeGold <br> Gold Coin</a>
+								<div class="action">
+								<img src="images/ico/1gram_coin.jpg">
+								</div>
+								
+								<p class="desc">Minting Charge ₹399</p>
+								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>
+								<div class="row cart" >
+									<div class="col-sm-4 col-xs-4 wow fadeInLeft qty_label" ><span>Quantity</span></div>
+									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove" data-attr="quantity1"><span class="remove_qty"  data-attr="quantity1"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" id="quantity1"  class="quantity" value="0" /> </span> <span class="add_qty" data-attr="quantity1"><img src="images/ico/add-plus-button.svg"> </span></div></div>
+								</div>
+								</div>
+						</label>
+
+						</div>
+						<div class="col-sm-3 col-xs-6 wow fadeInRight">
+							<input type="checkbox" id="cb2" />
+								<label for="cb2">
+								<div class="card  ">
+								<div class="card_content desk">2gm SafeGold <br> Gold Coin</div>
+								<a href="" class="card_content mob " data-toggle="modal" data-target="#myModal">2gm SafeGold <br> Gold Coin</a>
+								<div class="action">
+								<img src="images/ico/2gms_coin.jpg">
+								</div>
+
+								<p class="desc">Minting Charge ₹399</p>
+								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>
+								<div class="row cart" >
+									<div class="col-sm-4 col-xs-4 wow fadeInLeft qty_label" ><span>Quantity</span></div>
+									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity2"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity2" value="0"  /> </span> <span class="add_qty" data-attr="quantity2"><img src="images/ico/add-plus-button.svg"> </span></div></div>
+								</div>
+								</div>
+							</label>
+						</div>
+						
+						<div class="col-sm-3 col-xs-6 wow fadeInRight">
+							<input type="checkbox" id="cb3" />
+						<label for="cb3">
+								<div class="card ">
+									<div class="card_content desk">5gm SafeGold <br> Gold Coin</div>
+								<a href="" class="card_content mob " data-toggle="modal" data-target="#myModal">5gm SafeGold <br> Gold Coin</a>
+								<div class="action">
+								<img src="images/ico/5grams_coin.jpg">
+								</div>
+							
+								<p class="desc">Minting Charge ₹399</p>
+								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>
+								<div class="row cart" >
+									<div class="col-sm-4 col-xs-4 wow fadeInLeft qty_label" ><span>Quantity</span></div>
+									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity3"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity3" value="0"  /> </span> <span class="add_qty" data-attr="quantity3"><img src="images/ico/add-plus-button.svg"> </span></div></div>
+								</div>
+								</div>
+							</label>
+						</div>
+						
+						<div class="col-sm-3 col-xs-6 wow fadeInRight">
+						<input type="checkbox" id="cb4" />
+						<label for="cb4">
+								<div class="card ">
+									<div class="card_content desk ">10gm SafeGold <br> Rectangular Gold Coin</div>
+									<a href="" class="card_content mob " data-toggle="modal" data-target="#myModal">10gm SafeGold Rectangular Gold Coin</a>
+								<div class="action">
+								<img src="images/ico/rectangular_coin.jpg">
+								</div>
+								
+								<p class="desc">Minting Charge ₹399</p>
+								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>
+								<div class="row cart" >
+									<div class="col-sm-4 col-xs-4 wow fadeInLeft qty_label" ><span>Quantity</span></div>
+									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity4"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity4" value="0"  /> </span> <span class="add_qty" data-attr="quantity4"><img src="images/ico/add-plus-button.svg"> </span></div>
+								</div>
+
+						</div>
+						</div>
+						</label>
+					
+					
+						</div>
+						</div>
+						<div class="proceed_act" style="margin-top:40px;">
+							<a href="delivery_reciept.html" style="float:right"  class="btn btn-primary1">Proceed &nbsp <img src="images/ico/Path_841.svg"></a>
+						
+					
+						</div>
+					
+                </div>
+                </div>
+
+                <div class="col-sm-4 wow fadeInRight right_divs">
+                    
+					<div class="card" style="margin-top: 83px;">
+						<span class="card_content">Frequently Asked Questions</span>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How is the purity of gold ensured?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                       What is the live gold price?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										Where is my gold stored?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                       How do I send or gift someone gold?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFive">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                       Why should I use the Gold Savings Plan?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+						
+                    </div>
+                    </div>
+					
+					<div class="card">
+								<p class="card_content">Customer Support</p>
+								<p class="desc">Your trust and security is our priority. And we're here to help. <a href="" style="color:#00BBB4">Click here to contact us.</a></p>
+								
+								</div>
+
+                </div>
+        </div>
+        </div>
+        
+    </section><!--/#about-->
+
+    
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal"><img src="images/ico/close-button.svg"></button>
+        <h4 class="modal-title" style="text-align:center;color:#333;">Product Details</h4>
+      </div>
+      <div class="modal-body">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="images/ico/1gram_coin.jpg" width="25%">
+      </div>
+
+      <div class="item">
+       <img src="images/ico/1gram_coin.jpg" width="25%">
+      </div>
+    
+      <div class="item">
+       <img src="images/ico/1gram_coin.jpg" width="25%">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="fa fa-angle-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="fa fa-angle-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div class="row">
+  <div class="col-md-10">
+ <div class="card_content" style="color:#DECC62">1gm SafeGold Gold Coin</div>
+
+ <div class="product_dtl"> <p>Minting Charge ₹399</p></div>
+	<ul class="product_dtl">
+		<p>Product Details</p>
+		<li><div class="row"><div class="col-md-3 col-xs-3">Model </div><div class="col-md-1 col-xs-1">:</div><div class="col-md-8 col-xs-8">SG0001</div> </div></li>
+		<li><div class="row"><div class="col-md-3 col-xs-3">Metal Purity</div><div class="col-md-1 col-xs-1"> : </div><div class="col-md-8 col-xs-8"><span>24 Karat 99.5% pure gold </div> </div></li>
+		<li><div class="row"><div class="col-md-3 col-xs-3">Weight </div><div class="col-md-1 col-xs-1">: </div><div class="col-md-8 col-xs-8"><span>Tamper-proof certicard </div> </div></li>
+		<li><div class="row"><div class="col-md-3 col-xs-3">Packaging </div><div class="col-md-1 col-xs-1">: </div><div class="col-md-8 col-xs-8"><span> 1.0000 gm(s) </div> </div></li>
+		<li><div class="row"><div class="col-md-3 col-xs-3">Est. Arrival</div><div class="col-md-1 col-xs-1"> : </div><div class="col-md-8 col-xs-8"><span>7-10 days </div> </div></li>
+		<li><div class="row"><div class="col-md-3 col-xs-3">Return Policy</div><div class="col-md-1 col-xs-1"> : </div><div class="col-md-8 col-xs-8"><span>This product cannot be cancelled, returned, or replaced once ordered. </div> </div></li>
+	</ul>
+	<ul  class="product_dtl" id="highlights"><p>Product Highlights</p>
+	<li> SafeGold coins are set in 24 Karat Yellow Gold - Guaranteed weight and purity; specially manufactured in state-of-the-art facilities </li>
+	<li> Hallmarked for purity with zero negative tolerance for weight and purity </li>
+	<li> Sealed in international quality packaging with unique serial number, ensures foolproof quality and compelet traceability for each coin.</li>
+	</ul>
+
+      </div>
+      </div>
+      <div class="modal-footer" style="text-align:center">
+	  
+	  	<a href=" delivery_po_no_address.html" class="btn btn-primary1">Place order</a>
+       
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+   
+
+   
+<script src="js/jquery.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+	<script>
+	$(document).ready(function(){
+
+var quantitiy=0;
+   $('.add_qty').click(function(){
+        
+        //e.preventDefault();
+		
+		var id = $(this).data("attr");
+    
+        var quantity = parseInt($('#'+id).val());
+   
+     $('#'+id).val(quantity + 1);
+
+          
+       
+        
+
+    });
+
+     $('.remove_qty').click(function(){
+       
+      
+     	var id = $(this).data("attr");
+        var quantity = parseInt($('#'+id).val());
+
+            if(quantity>0)
+			{
+				$('#'+id).val(quantity - 1);
+            }
+    });
+    
+});
+	</script>
+	
+	
+</body>
+</html>

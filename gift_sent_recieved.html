@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>My Gifts</title>
+	<!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+<style>	
+.page_user, .page_name
+		{
+			display: none!important;
+		}
+.gift_dtl .p_label {
+
+    line-height: 1;
+}
+.tab-content h2
+{
+	margin-top:10px;
+}
+	.mobile_data
+			{
+				display:none;
+			}
+@media (max-width: 767px)
+	{
+		.nav.main-tab
+		{
+				width: 46%;
+				margin: 0 auto;
+				display: -webkit-box;
+		}
+		body
+		{
+			background:#fff;
+		}
+		.main-menu
+		{
+		background-color:#fff;
+		}
+	.checkout_form .view_invoice 
+	{
+		float:none;
+		text-align:center;
+	}
+	
+	.mobile_card
+	{
+		display:block!important;
+		
+	}
+	.desktop_card
+	{
+		display:none;
+	}
+	.mobile_data
+			{
+				display:block!important;
+				text-align:center!important;
+			}
+			.mobile_data p
+			{
+				color:#333333!important;
+				font-size:18px;
+			}
+		.page_name
+		{
+			color:#D2C061!important;
+			font-size:18px;
+			font-family: 'Sarabun Semibold';
+			margin:0px auto;
+			width: 60%;
+			display: block!important;
+			text-align: center;
+		}
+		.action.gift
+		{
+			
+				text-align: center;
+				/* margin-top: -60px; */
+				/* float: right; */
+				position: absolute;
+				top: 35%;
+				left: 26%;
+				z-index: 1111111;
+		}
+	
+		.page_logo
+		{
+			display:none!important;	
+		}
+		.page_user
+		{
+			display: block!important;
+		}
+		.navbar.navbar-default
+		{
+			background:#fff;
+		}
+		.mark_padding h2
+		{
+			display:block;
+		}
+		.page_head1
+		{
+				display:none;
+		}
+		.navbar.navbar-default .navbar-brand
+		{
+			margin-right:0px;
+		}
+	
+	}
+	
+	.checkout_form .head 
+	{
+		font-family: 'Sarabun Medium';
+		font-size: 12px;
+		color: #00BBB4; 
+	}
+	.checkout_form
+	{
+		box-shadow:0px 0px 10px 0px #ddd;
+		background:#fff;
+		margin-top:15px;
+		margin-bottom:15px;
+		padding: 15px;
+	}
+	.card
+	{
+		box-shadow:0px 0px 10px 0px #ddd;
+	}
+	.mobile_card
+	{
+		display:none;
+	}
+	.error_mob
+	{
+		font-family: 'Sarabun Medium';
+		font-size: 12px;
+		color: #F1553C; 
+		margin-bottom:15px;
+	}
+	
+	
+</style>	
+	
+	
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page_logo" href="index.html"><img src="images/logo.svg" alt="logo"></a>
+                    <a class="navbar-brand page_name" href="index.html">My Gifts </a>
+                    <a class="navbar-brand page_user" href="index.html"><span><img src="images/ico/user_mob.svg" ></span> </a>
+                </div>
+				
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav left_menu" style="float:left">
+                        <li class="scroll"><a href="index.html"><img src="images/ico/home.svg" > &nbsp Home</a></li>
+                        <li class="scroll"><a href="buy_gold_enter_amt.html"><img src="images/ico/gold-bars_menu.svg" > &nbsp Buy</a></li>
+                        <li class="scroll active"><a href="gift_intro.html"><img src="images/ico/gift.svg" > &nbsp Gift</a></li>
+                        <li class="scroll"><a href="sell_gold_enter_amt.html"><img src="images/ico/gold-bars_menu.svg" > &nbsp Sell</a></li>
+                       <li class="scroll "><a href="delivery_intro.html"><img src="images/ico/delivery-truck.svg" > &nbsp Delivery</a></li>
+                        <li class="scroll"><a href="#savings Plan">Savings Plan</a></li>
+                  
+                    </ul>
+					
+					 <ul class="nav navbar-nav responsive" style="float:left;display:none" id="sidebar">
+					
+                        <li class="scroll " id="user_name" style=""><a href="">&nbsp Gaurav Mathur</a></li>
+                        <li class="scroll " style="color:#00BBB4; font-size:12px"><a href=""  style="color:#00BBB4; font-size:12px">&nbsp View Profile &nbsp <img src="images/ico/Path_85.svg"></a></li>
+                        <li class="scroll "><a href="index.html"> &nbsp Home</a></li>
+                        <li class="scroll"><a href="my_order_buy.html"> &nbsp My Orders</a></li>
+						  <li class="scroll"><a href="savings Plan"> &nbsp Gold Savings Plan</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp consolidate Wallets</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Help & Support</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Settings</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Logout</a></li>
+						
+						<br>
+                      <li class="scroll terms"><a href=""></i> &nbsp Term of service</a></li>
+                      <li class="scroll terms"><a href=""></i> &nbsp Privacy Policy</a></li>
+                      <li class="scroll terms"><a href=""></i> &nbsp @2019 SafeGold</a></li>
+                      
+                  
+                    </ul>
+					
+					 <ul class="nav navbar-nav right_nav" style="float:right">
+                        <li class="scroll"><a href="#Help & Support">Help & Support</a></li>
+                      
+						<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div  class="user_crl"><img src="images/ico/user.svg"></div>&nbsp <img src="images/ico/keyboard-left-arrow-button_dwn.svg"></a>
+							  <ul class="dropdown-menu">
+								<li><a href="my_order_buy.html">My Orders</a></li>
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								 </ul>
+						</li>
+
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="about" style="margin-top:0px;">
+        <div class="container">
+
+            
+
+            <div class="row">
+                <div class="col-sm-12 wow fadeInLeft" style="">
+                    <h2 class="page_head1" style="color:#333333"><img src="images/ico/Path_118.svg"> &nbsp My Gifts</h2>
+					
+								
+					
+				 <div role="tabpanel">
+                        <ul class="nav main-tab nav-justified" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#tab1" role="tab" data-toggle="tab" aria-controls="tab1" aria-expanded="true">Sent</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab2" role="tab" data-toggle="tab" aria-controls="tab2" aria-expanded="false">Received</a>
+                            </li>
+                           
+                           
+                        </ul>
+						
+							
+							<div id="tab-content" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active in" id="tab1" aria-labelledby="tab1">
+							<div class="action gift" style="text-align:center;margin-top: -60px; float:right">
+											<a href="Sent_individual_gift.html" class="btn btn-primary1"><img src="images/ico/gift_white.svg">&nbsp Send Another Gift</button></a>
+										</div>
+							<div class="row">
+					
+							<div class="col-md-4">
+							<div class="card" style="z-index:0">
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<h2>100 <span style="font-size:14px">mg</span></h2>
+							<span class="gift_value">Gift Value ₹399</span>
+							</div>
+							
+							<div class="col-md-6 col-xs-6">
+						
+							<span class="gift_value">	Sent on 1 Aug 2018 Expires<br> on 7 Aug 2018</span>
+							</div>
+							
+						
+							</div>
+							
+							
+							<div class="mobile_data">
+								
+									<img src="images/ico/sticker_1.png">
+								
+								
+									<p class="" style="	font-family: 'Sarabun'!important;">	"Congratulations! :D".</p>
+								
+									
+								</div>
+								
+								
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="p_label"> Recipients</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> Raymond Holt <span style="color:#999">(15 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+							<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected first!</p>
+							<p class="p_label">+10 mg extra rewarded</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Rosa Diaz <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+								<p class="reminder">Send Reminder</p>
+							</div>
+							</div>
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Gina Linetti <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+								<p class="reminder">Send Reminder</p>
+							</div>
+							</div>
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Amy Santiago <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+							
+								<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected!</p>
+								
+							</div>
+							</div>
+							
+							
+						
+							
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Jake Peralta <span style="color:#999">(10 mg)</p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+								<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected second!</p>
+							<p class="p_label">+5 mg extra rewarded</p>
+							</div>
+							</div>
+							
+						
+							
+						
+                         
+                         <div class="row">
+							<div class="col-md-6">
+							<a href="" class="show_all">Show all <i class="fa fa-chevron-down" ></i></a>
+							
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+							
+						<div class="col-md-4">
+							<div class="card" style="z-index:0">
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<h2>100 <span style="font-size:14px">mg</span></h2>
+							<span class="gift_value">Gift Value ₹399</span>
+							</div>
+							
+							<div class="col-md-6 col-xs-6">
+						
+							<span class="gift_value">	Sent on 1 Aug 2018 Expires<br> on 7 Aug 2018</span>
+							</div>
+							
+						
+							</div>
+							
+								<div class="mobile_data">
+								
+									<img src="images/ico/sticker_1.png">
+								
+								
+									<p class="" style="	font-family: 'Sarabun'!important;">	"Congratulations! :D".</p>
+								
+								
+								</div>
+							
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="p_label"> Recipients</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> Raymond Holt <span style="color:#999">(15 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+							<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected first!</p>
+							<p class="p_label">+10 mg extra rewarded</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Rosa Diaz <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+								<p class="not_collect"><img src="images/ico/Path_1051.svg" style="width:10px;">  &nbsp Not collected</p>
+								<p class="p_label">Gold returned to you</p>
+							</div>
+							</div>
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Gina Linetti <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+							<p class="not_collect"><img src="images/ico/Path_1051.svg"  style="width:10px;">   &nbsp  Not collected</p>
+								<p class="p_label">Gold returned to you</p>
+							</div>
+							</div>
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Amy Santiago <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+							
+								<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected!</p>
+								
+							</div>
+							</div>
+							
+							
+						
+							
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Jake Peralta <span style="color:#999">(10 mg)</p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+								<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected second!</p>
+							<p class="p_label">+5 mg extra rewarded</p>
+							</div>
+							</div>
+							
+						
+							
+						
+                         
+                         <div class="row">
+							<div class="col-md-6">
+							<a href="" class="show_all">Show all <i class="fa fa-chevron-down" ></i></a>
+							
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+							
+								<div class="col-md-4">
+							<div class="card" style="z-index:0">
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<h2>100 <span style="font-size:14px">mg</span></h2>
+							<span class="gift_value">Gift Value ₹399</span>
+							</div>
+							
+							<div class="col-md-6 col-xs-6">
+						
+							<span class="gift_value">	Sent on 1 Aug 2018 Expires<br> on 7 Aug 2018</span>
+							</div>
+							
+							<div class="mobile_data">
+								
+									<img src="images/ico/sticker_1.png">
+								
+								
+									<p class="" style="	font-family: 'Sarabun'!important;">	"Congratulations! :D".</p>
+								
+									
+								</div>
+							
+						
+							</div>
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="p_label"> Recipients</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> Raymond Holt <span style="color:#999">(15 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+							<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected first!</p>
+							<p class="p_label">+10 mg extra rewarded</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Rosa Diaz <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+								<p class="not_collect"><img src="images/ico/Path_1051.svg" style="width:10px;">  &nbsp Not collected</p>
+								<p class="p_label">Gold returned to you</p>
+							</div>
+							</div>
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Gina Linetti <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+							<p class="not_collect"><img src="images/ico/Path_1051.svg"  style="width:10px;">   &nbsp  Not collected</p>
+								<p class="p_label">Gold returned to you</p>
+							</div>
+							</div>
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Amy Santiago <span style="color:#999">(10 mg)</span></p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+							
+								<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected!</p>
+								
+							</div>
+							</div>
+							
+							
+						
+							
+							
+								<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="gift_products_label"> 	Jake Peralta <span style="color:#999">(10 mg)</p>
+							</div>
+							<div class="col-md-6 gift_dtl col-xs-6">
+								<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px"> &nbsp Collected second!</p>
+							<p class="p_label">+5 mg extra rewarded</p>
+							</div>
+							</div>
+							
+						
+							
+						
+                         
+                         <div class="row">
+							<div class="col-md-6">
+							<a href="" class="show_all">Show all <i class="fa fa-chevron-down" ></i></a>
+							
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+							
+                            </div>
+
+							</div>
+                           
+                           
+                            
+                          
+                            <div role="tabpanel" class="tab-pane fade" id="tab2" aria-labelledby="tab2">
+						
+							<div class="row">
+					
+							<div class="col-md-4">
+							<div class="card" style="z-index:0">
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<h2>100 <span style="font-size:14px">mg</span></h2>
+							<span class="gift_value">24K Gold</span>
+							</div>
+							
+							<div class="col-md-6 col-xs-6">
+						
+							<span class="gift_value">	Sent on 1 Aug 2018 Expires<br> on 7 Aug 2018</span>
+							</div>
+							
+						
+							</div>
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="p_label">Sent by</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-12 col-xs-12">
+							<p class="gift_products_label"> Raymond Holt </p>
+							</div>
+							<div class="col-md-12 gift_dtl col-xs-12">
+								<div class="action " style="text-align:center;margin-top: 15px;">
+											<a href="gift_collect.html"  class="btn btn-primary1">Collect now for 10mg extra! </a>
+										</div>
+							</div>
+							</div>
+							
+			
+							
+						
+							
+						
+                         
+                     
+                            </div>
+                            </div>
+							
+								<div class="col-md-4">
+							<div class="card" style="z-index:0">
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<h2>100 <span style="font-size:14px">mg</span></h2>
+							<span class="gift_value">24K Gold</span>
+							</div>
+							
+							<div class="col-md-6 col-xs-6">
+						
+							<span class="gift_value">	Sent on 1 Aug 2018 Expires<br> on 7 Aug 2018</span>
+							</div>
+							
+						
+							</div>
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="p_label">Sent by</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-12 col-xs-12">
+							<p class="gift_products_label"> Raymond Holt </p>
+							</div>
+							<div class="col-md-12 gift_dtl col-xs-12">
+							<p class="gift_products"><img src="images/ico/check-symbol.svg" style="width:14px">&nbsp Collected first!</p>
+							<p class="p_label">+10 mg extra rewarded</p>
+							</div>
+							</div>
+							
+			
+							
+						
+							
+						
+                         
+                     
+                            </div>
+                            </div>
+						
+								<div class="col-md-4">
+							<div class="card" style="z-index:0">
+							
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<h2>100 <span style="font-size:14px">mg</span></h2>
+							<span class="gift_value">24K Gold</span>
+							</div>
+							
+							<div class="col-md-6 col-xs-6">
+						
+							<span class="gift_value">	Sent on 1 Aug 2018 Expires<br> on 7 Aug 2018</span>
+							</div>
+							
+						
+							</div>
+							<div class="row">
+							<div class="col-md-6 col-xs-6">
+							<p class="p_label">Sent by</p>
+							</div>
+							</div>
+							
+							<div class="row">
+							<div class="col-md-12 col-xs-12">
+							<p class="gift_products_label"> Raymond Holt </p>
+							</div>
+							<div class="col-md-12 gift_dtl col-xs-12">
+							<p class="not_collect"><img src="images/ico/Path_1051.svg" style="width:10px">&nbsp Not collected</p>
+							<p class="p_label">This gift has expired</p>
+							</div>
+							</div>
+							
+			
+							
+						
+							
+						
+                         
+                     
+                            </div>
+                            </div>
+                            </div>
+							
+							
+                            </div>
+				
+                            
+                        </div>
+                    </div>	
+                    </div>
+
+               
+				
+            </div>
+        </div>
+    </section><!--/#about-->
+
+    
+
+
+
+   
+
+   
+<script src="js/jquery.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+   
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Sell Gold - Confirm Sale</title>
+	<!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<style>
+	<!-- @media (min-width: 768px) -->
+	<!-- { -->
+		<!-- .checkout_form { -->
+
+			    <!-- animation: down ease 5s forwards; -->
+					<!-- z-index: -1; -->
+					<!-- height: 100%; -->
+					<!-- position: absolute; -->
+					<!-- left: 62px; -->
+					<!-- min-height: 300px; -->
+					<!-- max-height: 100%; -->
+					<!-- background-size: auto; -->
+		<!-- } -->
+				<!-- @keyframes down { -->
+			<!-- 0% { transform: translateY(-145px); opacity: 1;}; -->
+			<!-- 20% { opacity: 0;} -->
+
+		  <!-- 75% { opacity:1} -->
+		  <!-- 100% {transform: translateY(0px); opacity: 1;}; -->
+		<!-- } -->
+	<!-- } -->
+	.checkout_form
+	{
+		border-top-left-radius:0px;
+		border-top-right-radius:0px;
+		transition-delay: 10s;
+		 /*box-shadow: inset 0px 10px 7px -7px blue; */
+		 box-shadow: inset  0px 11px 6px -6px #01aea540;
+	}
+	.acc_num	
+	{
+		font-family: 'Sarabun';
+		font-size:15px;
+			text-align:center;
+		color:#666666!important;
+	}
+	.wait_note	
+	{
+		font-family: 'Sarabun Light';
+		font-size:20px;
+		text-align:center;
+		color:#666666!important;
+	}
+	#account_verified p
+	{
+		font-family: 'Sarabun Light';
+		font-size:12px;
+		text-align:center;
+		color:#999999!important;
+	}
+	.mark1
+	{
+		height:132px;
+		margin-bottom:0px;
+	}
+	.action 
+	{
+			text-align: center;
+			margin-bottom: 30px;
+	}
+	.modal-title
+	{
+		font-family: 'Sarabun SemiBold';
+		font-size:16px;
+		color:#00BBB4!important;
+		
+	
+	}
+	.welcome_note
+	{
+		font-family: 'Sarabun';
+		font-size:14px;
+		text-align:center;
+		color:#999999!important;
+		margin:0 auto;
+		width:70%;
+	}
+	.form-group label
+	{
+		font-family: 'Sarabun SemiBold';
+		font-size:12px;
+		
+		color:#000000;
+		opacity:0.3;
+	}
+	.form-group span
+	{
+		font-family: 'Sarabun';
+		font-size:12px;
+		
+		color:#999999;
+		
+	}
+	.bottom_note
+	{
+		font-family: 'Sarabun';
+		font-size:15px;
+		text-align:center;
+		color:#666666!important;
+		margin:0 auto;
+		width:85%;
+	
+	}
+	.checkbox_fld
+	{
+		margin:0 auto;
+		width:60%;
+	}
+	
+	.container_checkbox {
+     display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Sarabun';
+    margin-top: 20px;
+    color: #666666!important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: normal;
+}
+
+/* Hide the browser's default checkbox */
+.container_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+     position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    margin-top: 6px;
+    width: 16px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container_checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_checkbox input:checked ~ .checkmark {
+  background-color: #00BBB4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_checkbox .checkmark:after {
+        left: 6px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 1.4px 1.4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+	</style>
+	
+	
+	<style>
+	.checkout_form
+	{
+		border-top-left-radius:0px;
+		border-top-right-radius:0px;
+		transition-delay: 10s;
+		 /*box-shadow: inset 0px 10px 7px -7px blue; */
+		 box-shadow: inset  0px 11px 6px -6px #01aea540;
+	}
+	.mark1
+	{
+		height:132px;
+		margin-bottom:0px;
+	}
+	@media (max-width: 767px)
+	{
+		.right_divs
+		{
+		display:none;
+		}
+		.mark_padding
+		{
+			padding-right: 15px!important;
+			
+		}
+		.checkout_form
+		{
+			box-shadow:none;
+			width:100%;
+			background:#fff;
+		}
+		body
+		{
+				background:#fff;
+		}
+		#main-menu
+		{
+			display:none;
+		}
+		#about
+		{
+				padding-top:15px;
+		}
+		.promo_code 
+		{
+			width:100%;
+			background:#F7F7F7;
+			padding:0px 10px;
+		}
+		.page_head
+		
+		{
+				color:#D2C061!important;
+				font-size:18px;
+				font-family:'Sarabun SemiBold';
+				text-align:center;
+		}
+		.promo_code input
+		{
+		    background: #f7f7f7
+		}
+		
+		.mark1.original
+		{
+			    background-image:linear-gradient(to right, #00998E , #00BBB4);
+				display:none;
+			
+		}
+		.mark1.sell
+		{
+			display:block;
+			padding:15px;
+		}
+		.card .offer .card_content
+		{
+			font-size:15px;
+		}
+		.card .offer .desc
+		{
+			font-size:12px;
+		}
+		.card.jewellery
+		{
+			width:90%!important;
+		}
+	
+	}
+	.mark1.sell
+		{
+			display:none;
+		}
+		.graph
+		{
+			animation-delay: 10s;
+		}
+		
+	
+	
+	</style>
+	
+	
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="logo"></a>
+                </div>
+				
+               <div class="collapse navbar-collapse">
+						 <ul class="nav navbar-nav left_menu" style="float:left">
+                        <li class="scroll"><a href="index.html"><img src="images/ico/home.svg" > &nbsp Home</a></li>
+                        <li class="scroll"><a href="buy_gold_enter_amt.html"><img src="images/ico/gold-bars_menu.svg" > &nbsp Buy</a></li>
+                        <li class="scroll"><a href="gift_intro.html"><img src="images/ico/gift.svg" > &nbsp Gift</a></li>
+                        <li class="scroll active"><a href="sell_gold_enter_amt.html"><img src="images/ico/gold-bars_menu.svg" > &nbsp Sell</a></li>
+                      <li class="scroll "><a href="delivery_intro.html"><img src="images/ico/delivery-truck.svg" > &nbsp Delivery</a></li>
+                        <li class="scroll"><a href="#savings Plan">Savings Plan</a></li>
+                  
+                    </ul>
+					
+					<ul class="nav navbar-nav responsive" style="float:left;display:none" id="sidebar">
+					
+                        <li class="scroll " id="user_name" style=""><a href="">&nbsp Gaurav Mathur</a></li>
+                        <li class="scroll " style="color:#00BBB4; font-size:12px"><a href=""  style="color:#00BBB4; font-size:12px">&nbsp View Profile &nbsp <img src="images/ico/Path_85.svg"></a></li>
+                        <li class="scroll "><a href="index.html"> &nbsp Home</a></li>
+                        <li class="scroll"><a href="my_order_buy.html"> &nbsp My Orders</a></li>
+						  <li class="scroll"><a href="savings Plan"> &nbsp Gold Savings Plan</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp consolidate Wallets</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Help & Support</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Settings</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Logout</a></li>
+						
+						<br>
+                      <li class="scroll terms"><a href=""></i> &nbsp Term of service</a></li>
+                      <li class="scroll terms"><a href=""></i> &nbsp Privacy Policy</a></li>
+                      <li class="scroll terms"><a href=""></i> &nbsp @2019 SafeGold</a></li>
+                      
+                  
+                    </ul>
+					
+					 <ul class="nav navbar-nav right_nav" style="float:right">
+                        <li class="scroll"><a href="#Help & Support">Help & Support</a></li>
+                      
+						<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div  class="user_crl"><img src="images/ico/user.svg"></div>&nbsp <img src="images/ico/keyboard-left-arrow-button_dwn.svg"></a>
+							  <ul class="dropdown-menu">
+									<li><a href="my_order_buy.html">My Orders</a></li>
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								 </ul>
+						</li>
+
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="about" style="">
+        <div class="container">
+
+            
+
+            <div class="row">
+                <div class="col-sm-8 wow fadeInLeft mark_padding" style="padding-right:40px">
+                    <h2  style="color:#333333;margin-bottom:30px;" class="page_head"> <a href="sell_gold_enter_amt.html"> <span style="color:#DECC62;font-size:24px;float:left"><img src="images/ico/Path_118.svg"></span> </a>&nbsp Confirm Sale</h2>
+					<div class="mark1 original"  style="z-index:9999;">
+					<div class="row" style=" padding: 20px 0px">
+						<div class="col-sm-4 wow fadeInLeft">
+								
+								<div class="" style="display:inline-block;">
+								<img src="images/ico/gold-bars1.svg" style="display:inline-block;margin-top:-40px;">
+								<div class="buy_price" style="display:inline-block;padding-left:15px;">
+								<p>Weight To Be Sold</p>
+								<span style="color:#fff">0.6365 <span style="font-size:16px;color:#fff">gm</span></span>
+								</div>
+								</div>
+								
+
+						</div>
+						
+						<div class="col-sm-8 wow fadeInLeft">
+								
+								<div class="buy_price" style="float:right">
+								<p>Balance After Sale</p>
+								<span  style="color:#fff">1.0000 gm</span>
+								</div>
+
+						</div>
+					
+					
+						</div>
+				
+					</div>
+					
+					
+					<div class="mark1 sell"  style="z-index:9999;">
+					<div class="row" style=" padding: 20px 0px">
+						<div class="col-sm-4 col-xs-7 wow fadeInLeft">
+								
+								<div class="" style="display:inline-block;">
+								<img src="images/ico/gold-bars_mob.svg" style="display:inline-block;margin-top:-40px;">
+								<div class="buy_price" style="display:inline-block;padding-left:15px;font-size:12px;">
+								<p>Weight To Be Sold</p>
+								<span style="color:#fff;font-size:14px;">0.6365 <span style="font-size:16px;color:#fff">gm</span></span>
+								</div>
+								</div>
+								
+
+						</div>
+						
+						<div class="col-sm-8 col-xs-5 wow fadeInLeft">
+								
+								<div class="buy_price" style="float:right">
+								<p style="color:#fff;font-size:12px;">Balance After Sale</p>
+								<span  style="color:#fff;font-size:16px;">1.0000 gm</span>
+								</div>
+
+						</div>
+					
+					
+						</div>
+				
+					</div>
+					
+
+					
+						<div class="row" style="margin-bottom:30px; ">
+							<div class="checkout_form ">
+							<ul class="nostyle" style=" padding-left: 15px;padding-right: 15px;">
+							<li><div class="row"><span class="pull-left">Gold Rate</span><span class="pull-right">₹ 3,029 /gm</span></div></li>
+							<li><div class="row"><span class="pull-left">Value of Gold Sold</span><span class="pull-right">₹ 1,514</span></div></li>
+
+							</ul>
+							
+							
+							
+							<ul class="nostyle" style=" padding-left: 15px;padding-right: 15px;">
+							<li><div class="row purchas_amt"><span class="pull-left">Total Sale Amount</span><span class="pull-right">₹ 1,560</span></div></li>
+							<li  class="new_acc_add"><div class="row"><span class="pull-left">Account to be credited</span><span class="pull-right"><a href=""data-toggle="modal" data-target="#myModal">Add Account</a></span></div></li>
+							
+							<li class="account_no"><div class="row"><span class="pull-left">Account to be credited</span><span class="pull-right">xxxxxxxx314159</span></div></li>
+							<li  class="bank_name" style="padding:0px"><div class="row"><span class="pull-right" style="font-size:12px;opacity:0.5;">HDFC</span></div></li>
+							<li class="change_acc"><div class="row"><span class="pull-right"><a href="" data-toggle="modal" data-target="#change_account">Change</a></span></div></li>
+							</ul>
+							
+								<div class="action">
+								<a href="sell_gold_success.html"  class="btn btn-primary1">Sell for ₹1,560 &nbsp <img src="images/ico/Path_841.svg"></a>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="row  wow fadeInLeft" data-wow-duration="800ms" data-wow-delay="800ms">
+						<div class="card jewellery" style="background:#F7F7F7;width:80%;max-width:100%;margin:0 auto;">
+								<div class="offer">
+								<span class="card_content" style="color:#333333;">Jewellery Redemption Offer</span>
+								<p class="desc">Instead of selling, you can convert your gold into jewellery. Use code <span class="code">JEWEL10</span>  to get 10% off on your first transaction.</p>
+								<div class="action" style="text-align:right;">
+								<a href="">Know more &nbsp <img src="images/ico/Path_85.svg"></a>
+								</div>
+								</div>
+						</div>
+						</div>
+					
+                </div>
+
+                <div class="col-sm-4 wow fadeInRight right_divs " data-wow-duration="1000ms" data-wow-delay="1000ms">
+                    <div class="learn_more_buy">Gold Price Trends</div>
+					
+                  <div class="card graph">
+				  <img src="images/ico/graph.png">
+				  </div>
+					
+							
+					<div class="card wow fadeInRight " data-wow-duration="1200ms" data-wow-delay="1200ms" >
+						<span class="card_content">Frequently Asked Questions</span>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How is the purity of gold ensured?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                       What is the live gold price?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										Where is my gold stored?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                       How do I send or gift someone gold?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFive">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                       Why should I use the Gold Savings Plan?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                <div class="panel-body">
+                                    Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                </div>
+                            </div>
+                        </div>
+						
+                    </div>
+                    </div>
+					
+					<div class="card wow fadeInRight" data-wow-duration="1400ms" data-wow-delay="1400ms">
+								<span class="card_content">Customer Support</span>
+								<p class="desc">Your trust and security is our priority. And we're here to help. <a href="" 
+style="color:#00BBB4">Click here to contact us.</a></p>
+								
+					</div>
+
+                </div>
+				
+            </div>
+        </div>
+    </section><!--/#about-->
+	
+	
+	 <div id="change_account" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal"><img src="images/ico/close-button.svg"></button>
+        <h4 class="modal-title" style="text-align:center;color:#00BBB4;">Select account to be credited</h4>
+      </div>
+       <div class="modal-body">
+	 <div class="welcome_note">The sale amount from this transaction will be transferred to this account</div>
+			<div class="row">
+			<div class="col-md-12">
+ 
+						<div class="form-group">
+						<label>Account Number</label>
+						<select class="form-control">
+						<option>Select</option>
+						
+						</select>
+							
+						</div>
+			</div>
+			
+            </div>
+			
+			
+		
+				
+ 
+						<div class="modal-footer">
+						<div class="action" style="text-align:center;width:100%;padding: 0px;">
+								<a href=" "><button type="submit"   class="btn btn-primary">Select Account</button></a>
+								<p style="margin-top:15px;">
+								
+								
+								<a id="add_new_acc"  style="cursor:pointer">Add New Account</a>
+								</p>
+								
+								
+								
+						</div>
+		</div>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="account_verified" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal"><img src="images/ico/close-button.svg"></button>
+        <h4 class="modal-title" style="text-align:center;color:#00BBB4;">Add account to be credited</h4>
+      </div>
+       <div class="modal-body">
+	 <div class="welcome_note">The sale amount from this transaction will be transferred to this account</div>
+
+				<h4 class="acc_num"> HDFC - xxxxxxxx314159</h4>
+				<h3 class="wait_note"> Please wait while we verify your account</h3>
+				
+			
+			
+		<p>This may take a few minutes. Please do not navigate away from this page.</p>
+				
+ 
+						<div class="modal-footer">
+						<div class="action" style="text-align:center;width:100%;padding: 0px;">
+							
+								<p style="margin-top:15px;text-align:center">
+								
+								
+								<a style="cursor:pointer" id="verified"> <i class="fa fa-check"></i> Account Verified</a>
+								</p>
+								
+								
+								
+						</div>
+		</div>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><img src="images/ico/close-button.svg"></button>
+		
+        <h4 class="modal-title" style="text-align:center;color:#333;">Add account to be credited</h4>
+      </div>
+      <div class="modal-body">
+      <div class="welcome_note">The sale amount from this transaction will be transferred to this account</div>
+			<div class="form-group">
+			<label>Bank IFSC Code</label>
+                <input type="text" name="bank_code" class="form-control"  required>
+				<span>You should find this on your bank passbook</span>
+            </div>
+			
+			<div class="form-group">
+			<label>Account Number</label>
+                <input type="text" name="bank_code" class="form-control"  required>
+				
+            </div>
+			
+			<div class="bottom_note">₹1 will be transferred from your account to verify ownership. It will be credited back to you upon confirmation.</div>
+				<div class="checkbox_fld">
+				<label class="container_checkbox"><span>Save this account for future transactions</span>
+					<input type="checkbox" checked="checked">
+						<span class="checkmark"></span>
+				</label>
+				</div>
+ 
+						<div class="modal-footer">
+						<div class="action" style="text-align:center">
+								<button type="button"  id="add_acc" class="btn btn-primary ">Add Account</button>
+								
+						</div>
+		</div>
+    </div>
+
+  </div>
+</div>
+
+
+
+   
+
+   
+<script src="js/jquery.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+ 
+	<script>
+ $(document).ready(function(){
+ 
+		$('.account_no').hide();
+        $('.bank_name').hide();
+        $('.change_acc').hide();
+	   $('#add_acc').click(function(){
+        $('#myModal').modal('hide');
+		$('#account_verified').modal('show');
+
+		
+		});
+		
+		 $('#add_new_acc').click(function(){
+        $('#change_account').modal('hide');
+		$('#myModal').modal('show');
+
+		
+		});
+		 $('#verified').click(function(){
+        $('.account_no').show();
+        $('.bank_name').show();
+		$('#account_verified').modal('hide');
+        $('.change_acc').show();
+		$('.new_acc_add').hide();
+			
+		
+		});
+});			
+
+
+ 
+	</script>
+</body>
+</html>

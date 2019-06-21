@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>My Orders</title>
+	<!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+<style>	
+
+#tab3 .check_crl {
+	border:none;
+    width: 36px;
+    height: 36px;
+   border-radius:0px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    display: inline-block;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+#tab3 .check_crl img 
+{
+  width: 100%;
+
+}
+.page_name
+		{
+			display: none!important;
+		}
+		.page_user
+		{
+			display: none;
+		}
+@media (max-width: 767px)
+	{
+		.nav.main-tab
+		{
+				width: 60%;
+				margin: 0 auto;
+				display: -webkit-box;
+		}
+		body
+		{
+			background:#fff;
+		}
+		.main-menu
+		{
+		background-color:#fff;
+		}
+	.checkout_form .view_invoice 
+	{
+		float:none;
+		text-align:center;
+	}
+	
+	.mobile_card
+	{
+		display:block!important;
+	}
+	.desktop_card
+	{
+		display:none;
+	}
+.page_name
+		{
+			color:#D2C061!important;
+			font-size:18px;
+			font-family: 'Sarabun Semibold';
+			margin:0px auto;
+			width: 60%;
+			display: block!important;
+			text-align: center;
+		}
+		.page_logo
+		{
+			display:none!important;	
+		}
+		.page_user
+		{
+			display: block!important;
+		}
+		.navbar.navbar-default
+		{
+			background:#fff;
+		}
+		.mark_padding h2
+		{
+			display:block;
+		}
+		.page_head1
+		{
+				display:none;
+		}
+		.navbar.navbar-default .navbar-brand
+		{
+			margin-right:0px;
+		}
+	
+	}
+	
+	.checkout_form .head 
+	{
+		font-family: 'Sarabun Medium';
+		font-size: 12px;
+		color: #00BBB4; 
+	}
+	.checkout_form
+	{
+		box-shadow:0px 0px 10px 0px #ddd;
+		background:#fff;
+		margin-top:15px;
+		margin-bottom:15px;
+		padding: 15px;
+	}
+	.card
+	{
+		box-shadow:0px 0px 10px 0px #ddd;
+	}
+	.mobile_card
+	{
+		display:none;
+	}
+	.error_mob
+	{
+		font-family: 'Sarabun Medium';
+		font-size: 12px;
+		color: #F1553C; 
+		margin-bottom:15px;
+	}
+	#tab1 h5, #tab2 h5
+	{
+		padding-left:8px;
+	}
+	.order_divs {
+    width: 100%!important;
+    display: -webkit-inline-box;
+    padding: 0 24px;
+}
+	.order_dtl
+	{
+		width:20%!important;
+	}
+	
+	
+</style>	
+	
+	
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+    <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page_logo" href="index.html"><img src="images/logo.svg" alt="logo"></a>
+                    <a class="navbar-brand page_name" href="index.html">My Orders </a>
+                    <a class="navbar-brand page_user" href="index.html"><span><img src="images/ico/user_mob.svg" ></span> </a>
+                </div>
+				
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav left_menu" style="float:left">
+                        <li class="scroll"><a href="index.html"><img src="images/ico/home.svg" > &nbsp Home</a></li>
+                        <li class="scroll"><a href="buy_gold_enter_amt.html"><img src="images/ico/gold-bars_menu.svg" > &nbsp Buy</a></li>
+                        <li class="scroll"><a href="gift_intro.html"><img src="images/ico/gift.svg" > &nbsp Gift</a></li>
+                        <li class="scroll"><a href="sell_gold_enter_amt.html"><img src="images/ico/gold-bars_menu.svg" > &nbsp Sell</a></li>
+                       <li class="scroll "><a href="delivery_intro.html"><img src="images/ico/delivery-truck.svg" > &nbsp Delivery</a></li>
+                        <li class="scroll"><a href="#savings Plan">Savings Plan</a></li>
+                  
+                    </ul>
+					
+					 <ul class="nav navbar-nav responsive" style="float:left;display:none" id="sidebar">
+					
+                        <li class="scroll " id="user_name" style=""><a href="">&nbsp Gaurav Mathur</a></li>
+                        <li class="scroll " style="color:#00BBB4; font-size:12px"><a href=""  style="color:#00BBB4; font-size:12px">&nbsp View Profile &nbsp <img src="images/ico/Path_85.svg"></a></li>
+                        <li class="scroll "><a href="index.html"> &nbsp Home</a></li>
+                        <li class="scroll"><a href="my_order_buy.html"> &nbsp My Orders</a></li>
+						  <li class="scroll"><a href="savings Plan"> &nbsp Gold Savings Plan</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp consolidate Wallets</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Help & Support</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Settings</a></li>
+                        <li class="scroll"><a href=""></i> &nbsp Logout</a></li>
+						
+						<br>
+                      <li class="scroll terms"><a href=""></i> &nbsp Term of service</a></li>
+                      <li class="scroll terms"><a href=""></i> &nbsp Privacy Policy</a></li>
+                      <li class="scroll terms"><a href=""></i> &nbsp @2019 SafeGold</a></li>
+                      
+                  
+                    </ul>
+					
+					 <ul class="nav navbar-nav right_nav" style="float:right">
+                        <li class="scroll"><a href="#Help & Support">Help & Support</a></li>
+                      
+						<li class="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div  class="user_crl"><img src="images/ico/user.svg"></div>&nbsp <img src="images/ico/keyboard-left-arrow-button_dwn.svg"></a>
+							  <ul class="dropdown-menu">
+								<li><a href="my_order_buy.html">My Orders</a></li>
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								 </ul>
+						</li>
+
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="about" style="margin-top:0px;">
+        <div class="container">
+
+            
+
+            <div class="row">
+                <div class="col-sm-9 wow fadeInLeft" style="">
+                    <h2 class="page_head1" style="color:#333333">My Orders</h2>
+					
+				 <div role="tabpanel">
+                        <ul class="nav main-tab nav-justified" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#tab1" role="tab" data-toggle="tab" aria-controls="tab1" aria-expanded="true">Buy</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab2" role="tab" data-toggle="tab" aria-controls="tab2" aria-expanded="false">Sell</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab3" role="tab" data-toggle="tab" aria-controls="tab3" aria-expanded="false">Delivery</a>
+                            </li>
+                           
+                        </ul>
+                        <div id="tab-content" class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active in" id="tab1" aria-labelledby="tab1">
+							<div class="desktop_card">
+							<div class="sort_date"><p>24 Aug 2018</p></div>
+							<div class="card">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="table-responsive m-b-20">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:23%">Gold Weight Purchased</th>
+                                                <th style="width:18%">Buying Rate</th>
+                                                <th style="width:18%">Amount Paid</th>
+                                                <th style="width:23%">Updated Locker Balance</th>
+                                                <th style="width:18%" class="view_invoice"><a href="">View Invoice</a></th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                               
+                                               
+                                                <td class="rate">0.6365 <span class="weight">gm</span></td>
+                                                <td class="rate">₹ 3,000/gm</td>
+                                                <td class="rate">₹ 1,560</td>
+                                                <td class="rate">1.6365 <span class="weight">gm</span></td>
+                                                
+                                            </tr>
+										</tbody>
+										</table>
+                                
+                            </div>
+                            </div>
+							<div class="sort_date"><p>24 Aug 2018</p></div>
+							<div class="card">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+								
+							
+							<div class="table-responsive m-b-20">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                          
+                                                <th style="width:23%">Gold Weight Purchased</th>
+                                                <th style="width:18%">Buying Rate</th>
+                                                <th style="width:18%">Amount Paid</th>
+                                                <th style="width:23%">Updated Locker Balance</th>
+                                                <th style="width:18%" class="view_invoice"><a href="">View Invoice</a></th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                               
+                                               
+                                                <td class="rate">0.6365 <span class="weight">gm</span></td>
+                                                <td class="rate">₹ 3,000/gm</td>
+                                                <td class="rate">₹ 1,560</td>
+                                                <td class="rate">1.6365 <span class="weight">gm</span></td>
+                                                
+                                            </tr>
+										</tbody>
+										</table>
+                                
+                            </div>
+                            </div>
+                            </div>
+							
+								
+							<div class="card" style="display:none;">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+									<div class="row">
+									<div class="order_divs">
+							
+											<div class="order_dtl"><p class="order_value">Gold Weight Purchased</p>
+											   <p class="rate">0.6365 <span class="weight">gm</span></td></p>
+											   </div>
+                                               <div class="order_dtl"><p class="order_value">Buying Rate</p>
+											   <p class="rate">₹ 3,000/gm</p>
+											   </div>
+                                              <div class="order_dtl"><p class="order_value">Amount Paid</p>
+											   <p class="rate">₹ 1,560</p>
+											   </div>
+                                              <div class="order_dtl"><p class="order_value">Updated Locker Balance</p>
+											   <p class="rate">1.6365 <span class="weight">gm</span></td></p>
+											   </div>
+									</div>
+									</div>
+									</div>
+							
+							
+							
+							<div class="mobile_card">
+							<div class="sort_date"><p>24 Aug 2018</p></div>
+
+							<div class="checkout_form" style="width:100%; margin-top:20px;">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="row">
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Gold Weight Purchased</p>
+								<span>0.6365<span style="font-size:16px;">gm</span></span>
+								</div>
+								
+								<div class="buy_price1">
+								<p>Buying Amount</p>
+								<span>₹ 1,560</span>
+								</div>
+							
+							
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Amount Paid</p>
+								<span>₹ 3,000 <span style="font-size:16px;">/gm</span></span>
+								</div>
+								<div class="buy_price1">
+								<p>Updated Locker Balance</p>
+								<span>1.0000 <span style="font-size:16px;">gm</span></span>
+								</div>
+							</div>
+							<div class="col-sm-4">
+							</div>
+						
+							</div>
+								
+							<div class="row">
+							<div class="view_invoice" style=""><a href="">View invoice</a></div>
+							</div>
+							
+
+							</div>
+							
+							
+							<div class="sort_date"><p>24 Aug 2018</p></div>
+
+							<div class="checkout_form" style="width:100%;">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="row">
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Gold Weight Purchased</p>
+								<span>0.6365<span style="font-size:16px;">gm</span></span>
+								</div>
+								
+								<div class="buy_price1">
+								<p>Buying Amount</p>
+								<span>₹ 1,560</span>
+								</div>
+							
+							
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Amount Paid</p>
+								<span>₹ 3,000 <span style="font-size:16px;">/gm</span></span>
+								</div>
+								<div class="buy_price1">
+								<p>Updated Locker Balance</p>
+								<span>1.0000 <span style="font-size:16px;">gm</span></span>
+								</div>
+							</div>
+							<div class="col-sm-4">
+							</div>
+						
+							</div>
+								
+							<div class="row">
+							<div class="view_invoice" style=""><a href="">View invoice</a></div>
+							</div>
+							
+
+							</div>
+                           
+                           
+                            </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab2" aria-labelledby="tab2">
+							<div class="desktop_card">
+							<div class="sort_date"><p>24 Aug 2018</p></div>
+                                <div class="card">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="table-responsive m-b-20">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Gold Weight Sold</th>
+                                                <th>Selling  Rate</th>
+                                                <th>Sale Amount </th>
+                                                <th>Updated Locker Balance</th>
+                                                <th class="view_invoice"><a href="">View Receipt</a></th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                               
+                                               
+                                                <td class="rate">0.6365 <span class="weight">gm</span></td>
+                                                <td class="rate">₹ 3,000/gm</td>
+                                                <td class="rate">₹ 1,560</td>
+                                                <td class="rate">1.6365 <span class="weight">gm</span></td>
+                                                
+                                            </tr>
+										</tbody>
+										</table>
+                                
+                            </div>
+                            </div>
+							<div class="sort_date"><p>24 Aug 2018</p></div>
+							<div class="card">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="table-responsive m-b-20">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Gold Weight Sold</th>
+                                                <th>Selling Rate</th>
+                                                <th>Sale Amount </th>
+                                                <th>Updated Locker Balance</th>
+                                                <th class="view_invoice"><a href="">View Receipt</a></th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                               
+                                               
+                                                <td class="rate">0.6365 <span class="weight">gm</span></td>
+                                                <td class="rate">₹ 3,000/gm</td>
+                                                <td class="rate">₹ 1,560</td>
+                                                <td class="rate">1.6365 <span class="weight">gm</span></td>
+                                                <td class="wait"><img src="images/ico/clock-with-white-face.svg"> &nbsp Awaiting fund transfer</td>
+                                                
+                                            </tr>
+										</tbody>
+										</table>
+                                
+                            </div>
+                            </div>
+							
+							<div class="card">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="table-responsive m-b-20">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Gold Weight Sold</th>
+                                                <th>Selling Rate</th>
+                                                <th>Sale Amount </th>
+                                                <th>Updated Locker Balance</th>
+                                                <th class="view_invoice"><a href="">View Receipt</a></th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                               
+                                               
+                                                <td class="rate">0.6365 <span class="weight">gm</span></td>
+                                                <td class="rate">₹ 3,000/gm</td>
+                                                <td class="rate">₹ 1,560</td>
+                                                <td class="rate">1.6365 <span class="weight">gm</span></td>
+                                                <td class="error"><i class="fa fa-close"></i> &nbsp Could not complete fund transfer</td>
+                                                
+                                            </tr>
+										</tbody>
+										</table>
+                                
+                            </div>
+                            </div>
+                            </div>
+
+						<div class="mobile_card">
+							<div class="sort_date"><p>24 Aug 2018</p></div>
+
+							<div class="checkout_form" style="width:100%; margin-top:20px;">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="row">
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Gold Weight Sold</p>
+								<span>0.6365<span style="font-size:16px;">gm</span></span>
+								</div>
+								
+								<div class="buy_price1">
+								<p>Selling Rate</p>
+								<span>₹ 1,560</span>
+								</div>
+							
+							
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Sale Amount </p>
+								<span>₹ 3,000 <span style="font-size:16px;">/gm</span></span>
+								</div>
+								<div class="buy_price1">
+								<p>Updated Locker Balance</p>
+								<span>1.0000 <span style="font-size:16px;">gm</span></span>
+								</div>
+							</div>
+							<div class="col-sm-4">
+							</div>
+						
+							</div>
+								
+							<div class="row">
+							<div class="view_invoice" style=""><a href="">View invoice</a></div>
+							</div>
+							
+
+							</div>
+							
+							
+							<div class="sort_date"><p>10 Aug 2018</p></div>
+
+							<div class="checkout_form" style="width:100%;">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="row">
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Gold Weight Sold</p>
+								<span>0.6365<span style="font-size:16px;">gm</span></span>
+								</div>
+								
+								<div class="buy_price1">
+								<p>Selling Amount</p>
+								<span>₹ 1,560</span>
+								</div>
+							
+							
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Sale Amount </p>
+								<span>₹ 3,000 <span style="font-size:16px;">/gm</span></span>
+								</div>
+								<div class="buy_price1">
+								<p>Updated Locker Balance</p>
+								<span>1.0000 <span style="font-size:16px;">gm</span></span>
+								</div>
+							</div>
+							<div class="col-sm-4">
+							</div>
+						
+							</div>
+								
+							<div class="row">
+							<div class="view_invoice" style=""><a href="">View invoice</a></div>
+							</div>
+							
+
+							</div>
+							
+							<div class="checkout_form" style="width:100%;">
+							<h5 class="head">Transaction #SAFEGOLD34534</h5>
+							<div class="row">
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Gold Weight Sold</p>
+								<span>0.6365<span style="font-size:16px;">gm</span></span>
+								</div>
+								
+								<div class="buy_price1">
+								<p>Selling Amount</p>
+								<span>₹ 1,560</span>
+								</div>
+							
+							
+							</div>
+							<div class="col-sm-4 col-xs-6">
+								<div class="buy_price1">
+								<p>Sale Amount </p>
+								<span>₹ 3,000 <span style="font-size:16px;">/gm</span></span>
+								</div>
+								<div class="buy_price1">
+								<p>Updated Locker Balance</p>
+								<span>1.0000 <span style="font-size:16px;">gm</span></span>
+								</div>
+							</div>
+							<div class="col-sm-4 col-xs-12">
+							<div class="error_mob" style=""><img src="images/ico/Union_3.svg"> &nbsp Could not complete fund transfer</div>
+							</div>
+						
+							
+								
+							</div>
+							
+							<div class="row">
+							<div class="view_invoice" style=""><a href="">View invoice</a></div>
+							</div>
+							
+
+							</div>
+                           
+                           
+                            </div>
+							
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade order" id="tab3" aria-labelledby="tab3">
+							<div class="row">
+							<div class="col-md-12"><div class="sort_date"><p>24 Aug 2018</p></div></div>
+							<div class="col-md-5">
+							<div class="card" style="z-index:0">
+                              <p class="p_label"> Product Name </p>
+							  <h5 class="p_name">1gm SafeGold Gold Coin</h5>
+							  <p class="p_id">Transaction #SAFEGOLD34534</p>
+							  <div class="row">
+									<ul class="upper_progress_text">
+										<li class="active" > Order <br>Delivered</li>
+										<li class="">Order<br> Dispatched</li>
+										<li>Order<br> Delivered</li>
+										
+										</ul>
+							 </div>
+								<div class="row">
+									<ul class="progressbar">
+										<li class="" > 24 Aug 2018 <br>10:44 PM</li>
+										<li class="">N/A</li>
+										<li>Est. Delivery<br> 29 Aug 2018</li>
+										
+									  </ul>
+								</div>
+								<hr>
+								<div class="row transitions">
+								<div class="col-md-6 col-xs-8">
+									<p class="p_label">Updated Locker Balance</p>
+									<span class="p_name">0.6365 gm</span>
+								
+								</div>
+								<div class="col-md-6 col-xs-4">
+									
+									<p class="p_label">Amount Paid</p>
+									<span class="p_name"> ₹ 399</span>
+								</div>
+								</div>
+								
+								<div class="del_address">
+								<p class="p_label" style="margin-bottom:0px">Delivery Address</p>
+									<p class="p_name">#1902 19th floor - Tower B, Ganpatrao Kadam Marg, Lower Parel, Mumbai, Maharashtra - 400013</p>
+								</div>
+								<div class="view_invoice"><a href="">View Invoice</a></div>
+							
+                            </div>
+                            </div>
+							
+							<div class="col-md-5">
+							<div class="card" style="z-index:0">
+                              <p class="p_label"> Product Name </p>
+							  <h5 class="p_name">1gm SafeGold Gold Coin</h5>
+							  <p class="p_id">Transaction #SAFEGOLD34534</p>
+								<div class="row">
+										<ul class="upper_progress_text">
+										<li class="active" > Order <br>Delivered</li>
+										<li class="active">Order <br> Dispatched</li>
+										<li>Order <br> Delivered</li>
+										
+										</ul>
+								</div>
+								<div class="row">
+								
+									<ul class="progressbar">
+										<li class="active" >24 Aug 2018 <br>10:44 PM</li>
+										<li>25 Aug 2018 <br>10:44 PM</li>
+										<li>Est. Delivery <br>29 Aug 2018</li>
+										
+									  </ul>
+								</div>
+									<hr>								
+								<div class="row transitions">
+								<div class="col-md-6 col-xs-8">
+									<p class="p_label">Updated Locker Balance</p>
+									<span class="p_name">0.6365 gm</span>
+								
+								</div>
+								<div class="col-md-6 col-xs-4">
+									
+									<p class="p_label">Amount Paid</p>
+									<span class="p_name"> ₹ 399</span>
+								</div>
+								</div>
+								
+								<div class="del_address">
+									<p class="p_label" style="margin-bottom:0px">Delivery Address</p>
+									<p class="p_name">#1902 19th floor - Tower B, Ganpatrao Kadam Marg, Lower Parel, Mumbai, Maharashtra - 400013</p>
+								</div>
+								<div class="view_invoice"><a href="">View Invoice</a></div>
+							
+                            </div>
+                            </div>
+							
+							
+							
+                            </div>
+							
+							<div class="row">
+							<div class="col-md-12"><div class="sort_date"><p>10 Aug 2018</p></div></div>
+							<div class="col-md-5">
+							<div class="card">
+                              <p class="p_label"> Product Name </p>
+							  <h5 class="p_name">1gm SafeGold Gold Coin</h5>
+							  <p class="p_id">Transaction #SAFEGOLD34534</p>
+							    <div class="del_status_log">
+							  <div class="check_crl">	  <img src="images/ico/group_336.svg"></div>
+								<div class="del_status" id="">
+
+								<p>Delivered Successfully</p>
+								<span>Delivered on Aug 14, 2019</span>
+								</div>
+								</div>
+								
+								<hr>
+								<div class="row transitions">
+								<div class="col-md-6 col-xs-8">
+									<p class="p_label">Updated Locker Balance</p>
+									<span class="p_name">0.6365 gm</span>
+								
+								</div>
+								<div class="col-md-6 col-xs-4">
+									
+									<p class="p_label">Amount Paid</p>
+									<span class="p_name"> ₹ 399</span>
+								</div>
+								</div>
+								
+								<div class="del_address">
+								<p class="p_label" style="margin-bottom:0px">Delivery Address</p>
+									<p class="p_name">#1902 19th floor - Tower B, Ganpatrao Kadam Marg, Lower Parel, Mumbai, Maharashtra - 400013</p>
+								</div>
+								<div class="view_invoice"><a href="">View Invoice</a></div>
+							
+                            </div>
+                            </div>
+							
+							<div class="col-md-5">
+							<div class="card">
+                              <p class="p_label"> Product Name </p>
+							  <h5 class="p_name">1gm SafeGold Gold Coin</h5>
+							  <p class="p_id">Transaction #SAFEGOLD34534</p>
+							  
+							  <div class="del_status_log">
+							  <img src="images/ico/group_1126.svg">
+								<div class="del_status" id="">
+								<p>Delivery Unsuccessful</p>
+								
+								
+								</div>
+								</div>
+								<div class="comment"><p>No one was available at your address to receive your order. We will attempt to deliver your gold again.</p>
+								<span> For more information, please <a href="">contact support</a>.</span></div>
+								<hr>
+								<div class="row transitions">
+								<div class="col-md-6 col-xs-8">
+									<p class="p_label">Updated Locker Balance</p>
+									<span class="p_name">0.6365 gm</span>
+								
+								</div>
+								<div class="col-md-6 col-xs-4">
+									
+									<p class="p_label">Amount Paid</p>
+									<span class="p_name"> ₹ 399</span>
+								</div>
+								</div>
+								
+								<div class="del_address">
+									<p class="p_label" style="margin-bottom:0px">Delivery Address</p>
+									<p class="p_name">#1902 19th floor - Tower B, Ganpatrao Kadam Marg, Lower Parel, Mumbai, Maharashtra - 400013</p>
+								</div>
+								<div class="view_invoice"><a href="">View Invoice</a></div>
+							
+                            </div>
+                            </div>
+							
+							
+							
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>	
+                    </div>
+
+               
+				
+            </div>
+        </div>
+    </section><!--/#about-->
+
+    
+
+
+
+   
+
+   
+<script src="js/jquery.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+   
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
