@@ -2,10 +2,7 @@ jQuery(function($) {'use strict';
 
 	
 
-	$('.navbar-collapse ul li a').on('click', function() {  
-		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
-		return false;
-	});
+	
 
 	/*User define function
 	function Scroll() {
@@ -35,11 +32,13 @@ jQuery(function($) {'use strict';
 	// accordian
 	$('.accordion-toggle').on('click', function(){
 		$(this).closest('.panel-group').children().each(function(){
-		$(this).find('>.panel-heading').removeClass('active');
+		$(this).find('.panel-heading').removeClass('active');
 		 });
 
 	 	$(this).closest('.panel-heading').toggleClass('active');
 	});
+	
+
 
 	//Slider
 	$(document).ready(function() {
@@ -233,55 +232,53 @@ $(document).ready(function(){
     });
     });
 	
-	$(document).ready(function(){ 
-	var interval;
- $('.time').text("1:00");
-  countdown();
-function countdown() {
-  clearInterval(interval);
-  interval = setInterval( function() {
-      var timer = $('.time').html();
-      timer = timer.split(':');
-      var minutes = timer[0];
-      var seconds = timer[1];
-      seconds -= 1;
-      if (minutes < 0) return
-	 
-      else if (seconds < 0 && minutes != 0) {
-          minutes -= 1;
-          seconds = 59;
-		    
+	$(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+        checkScreenSize2();
+    });
 
-      }
-      else if (seconds < 10 && length.seconds !=1) seconds = '0' + seconds;
+    checkScreenSize();
+      checkScreenSize2();
 
-      $('.time').html(minutes + ':' + seconds);
-	
-      if (minutes == 0 && seconds == 0)
-		  clearInterval(interval)
-		   ($('#js-resetTimer span').css("opacity", "1"));
-		   
-  }, 1000);
-}
-
-$('#js-startTimer').click(function () {
-  $('.time').text("1:00");
-  countdown();
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 767) {
+			
+         $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {
+            $('.navbar-default').css({'box-shadow': 'none', 'background-color': ' rgb(255, 255, 255)'});
+        }
+        else {
+             $('.navbar-default').css({'box-shadow': 'none', 'background-color': ' rgb(255, 255, 255)'});
+        }
+		});
+			
+    
+        }
+        else
+        {
+             $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {
+            $('.navbar-default').css({'box-shadow': '0 0 3px 0 rgba(0, 0, 0, 0.1)', 'background-color': ' rgb(255, 255, 255)'});
+        }
+        else {
+           $('.navbar-default').css({'box-shadow': 'none', 'background-color': 'transparent'});
+        }
+    });
+        }
+    }
 });
-
-$('#js-resetTimer').click(function () {
-  $('.js-timeout').text("1:00");
-  clearInterval(interval);
-});
-	});
-	
+	   function checkScreenSize2(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 767) {
             $('.navbar-toggle').on('click', function () {
 			
-		
-              
-                $('#about').addClass('overlay');
+                $('body').addClass('overlay');
 				  $('.responsive').css('display', 'block');
-               
+                     $('#about').css('opacity', '0.4');
+					     $('#main-menu').addClass('overlay_head');
+					     $('#main-menu').css('background-color', 'transparent');
           
    
 			});
@@ -289,18 +286,22 @@ $('#js-resetTimer').click(function () {
 			$('#about').on('click', function () {
 			
 		
-              
-                $('#about').removeClass('overlay');
+                     $('#main-menu').removeClass('overlay_head');
+                        $('#main-menu').css({'background-color' : '#00BBB4', 'background-image' : 'linear-gradient(to right, rgb(0, 153, 142), rgb(0, 187, 180))' });
+                $('body').removeClass('overlay');
                 $('#sidebar').removeClass('collapse in');
                 $('#sidebar').addClass('collapse');
               $('#sidebar').attr('aria-expanded', 'false');
-              $('.responsive').css('display', 'none');
-              $('.collapse.in').css('display', 'none');
+              $('.responsive').css('opacity', '0');
+			  
+               $('#about').css('opacity', '1');
+			 
              
 			
    
 			});
+		}
 
-
+}
 
        

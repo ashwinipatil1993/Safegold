@@ -53,7 +53,7 @@ label::before {
     display: block;
     border-radius: 50%;
     position: absolute;
-    top: 5px;
+     top: 10px;
     left: 5px;
     width: 20px;
     border: 1px solid #DDDDDD;
@@ -64,19 +64,14 @@ label::before {
     transform: scale(1);
 }
 
-.odd label::before
-{
-		 top: -20px;
-}
-
-
 
 
 
 :checked+label::before {
   content: url('images/ico/Group_1162.svg');
- border:none;
+	border:none;
   transform: scale(1);
+  z-index:9999;
 }
 
 :checked+label img {
@@ -317,8 +312,15 @@ label::before {
 	{
 		width: 100%!important; 
 	}
-	
+	#place_order
+	{
+		display:block!important;
+	}
 	.proceed_act
+	{
+		margin-top:24px!important;
+	}
+	.proceed_act img
 	{
 		display:none;
 	}
@@ -375,10 +377,33 @@ label::before {
     font-family: 'Sarabun SemiBold';
     font-size: 18px;
 }
+}
+@media (max-width: 767px)
+{
+.modal.fade .modal-dialog {
+  transform: translate3d(0, 100vh, 0);
+}
+
+.modal.in .modal-dialog {
+  transform: translate3d(0, 0, 0);
+  margin-bottom: 0px;
+    top: 20px;
+}
+
+.proceed_act .btn.btn-primary1
+		{
+		    background: #fff;
+			border-color: #fff;
+			color:#C4A646!important;
+			
+		}
+
+}
 
 
 
-	}
+
+
 	</style>
 	
 </head><!--/head-->
@@ -466,9 +491,10 @@ label::before {
 						
 						
 						<div class="col-sm-3 col-xs-6 wow fadeInRight product_list_cols">
-							<input type="checkbox" id="cb1" />
-						<label for="cb1">
+							<input class="check" type="checkbox"  name="check[]" id="cb1" />
+							<label for="cb1" data-attr="quantity1"></label>
 								<div class="card  ">
+								
 								<div class="card_content desk">1gm SafeGold <br> Gold Coin</div>
 							<a href="" class="card_content mob " data-toggle="modal" data-target="#myModal">1gm SafeGold <br> Gold Coin</a>
 								<div class="action">
@@ -479,16 +505,19 @@ label::before {
 								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>
 								<div class="row cart" >
 									<div class="col-sm-4 col-xs-4 wow fadeInLeft qty_label" ><span>Quantity</span></div>
-									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove" data-attr="quantity1"><span class="remove_qty"  data-attr="quantity1"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" id="quantity1"  class="quantity" value="0" /> </span> <span class="add_qty" data-attr="quantity1"><img src="images/ico/add-plus-button.svg"> </span></div></div>
+									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove">
+									<span class="remove_qty"  data-attr="quantity1" data-attr2="cb1"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" id="quantity1"  class="quantity" value="0" /> </span> <span class="add_qty" data-attr="quantity1" data-attr2="cb1"><img src="images/ico/add-plus-button.svg"> </span></div></div>
 								</div>
 								</div>
-						</label>
+					
 
 						</div>
 						<div class="col-sm-3 col-xs-6 wow fadeInRight">
-							<input type="checkbox" id="cb2" />
-								<label for="cb2">
+							<input  class="check"  type="checkbox" name="check[]" id="cb2" />
+							<label for="cb2" data-attr="quantity2"></label>
 								<div class="card  ">
+								
+								
 								<div class="card_content desk">2gm SafeGold <br> Gold Coin</div>
 								<a href="" class="card_content mob " data-toggle="modal" data-target="#myModal">2gm SafeGold <br> Gold Coin</a>
 								<div class="action">
@@ -496,19 +525,20 @@ label::before {
 								</div>
 
 								<p class="desc">Minting Charge ₹399</p>
-								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>
+								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>	
 								<div class="row cart" >
 									<div class="col-sm-4 col-xs-4 wow fadeInLeft qty_label" ><span>Quantity</span></div>
-									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity2"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity2" value="0"  /> </span> <span class="add_qty" data-attr="quantity2"><img src="images/ico/add-plus-button.svg"> </span></div></div>
+									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity2"  data-attr2="cb2"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity2" value="0"  /> </span> <span class="add_qty" data-attr="quantity2"  data-attr2="cb2"><img src="images/ico/add-plus-button.svg"> </span></div></div>
 								</div>
-								</div>
-							</label>
+								</div>	
+						
 						</div>
 						
 						<div class="col-sm-3 col-xs-6 wow fadeInRight">
-							<input type="checkbox" id="cb3" />
-						<label for="cb3">
+							<input  class="check"  type="checkbox"  name="check[]" id="cb3"/>
+							<label for="cb3" data-attr="quantity3"></label>
 								<div class="card ">
+							
 									<div class="card_content desk">5gm SafeGold <br> Gold Coin</div>
 								<a href="" class="card_content mob " data-toggle="modal" data-target="#myModal">5gm SafeGold <br> Gold Coin</a>
 								<div class="action">
@@ -519,15 +549,15 @@ label::before {
 								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>
 								<div class="row cart" >
 									<div class="col-sm-4 col-xs-4 wow fadeInLeft qty_label" ><span>Quantity</span></div>
-									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity3"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity3" value="0"  /> </span> <span class="add_qty" data-attr="quantity3"><img src="images/ico/add-plus-button.svg"> </span></div></div>
+									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity3"  data-attr2="cb3"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity3" value="0"  /> </span> <span class="add_qty" data-attr="quantity3" data-attr2="cb3"><img src="images/ico/add-plus-button.svg"> </span></div></div>
 								</div>
 								</div>
-							</label>
+							
 						</div>
 						
 						<div class="col-sm-3 col-xs-6 wow fadeInRight">
-						<input type="checkbox" id="cb4" />
-						<label for="cb4">
+						<input  class="check"  type="checkbox" name="check[]" id="cb4" />
+						<label for="cb4" data-attr="quantity4">	</label>
 								<div class="card ">
 									<div class="card_content desk ">10gm SafeGold <br> Rectangular Gold Coin</div>
 									<a href="" class="card_content mob " data-toggle="modal" data-target="#myModal">10gm SafeGold Rectangular Gold Coin</a>
@@ -539,18 +569,18 @@ label::before {
 								<div class="view_invoice"><a href="" data-toggle="modal" data-target="#myModal">View Details</a></div>
 								<div class="row cart" >
 									<div class="col-sm-4 col-xs-4 wow fadeInLeft qty_label" ><span>Quantity</span></div>
-									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity4"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity4" value="0"  /> </span> <span class="add_qty" data-attr="quantity4"><img src="images/ico/add-plus-button.svg"> </span></div>
+									<div class="col-sm-8 col-xs-8 wow fadeInLeft qty_entry" ><div class="add_remove"><span class="remove_qty" data-attr="quantity4" data-attr2="cb4"><img src="images/ico/minus-btn.svg"></span><span class="qty"><input type="number" class="quantity" id="quantity4" value="0"  /> </span> <span class="add_qty" data-attr="quantity4" data-attr2="cb4"><img src="images/ico/add-plus-button.svg"> </span></div>
 								</div>
 
 						</div>
 						</div>
-						</label>
+					
 					
 					
 						</div>
 						</div>
 						<div class="proceed_act" style="margin-top:40px;">
-							<a href="delivery_reciept.html" style="float:right"  class="btn btn-primary1">Proceed &nbsp <img src="images/ico/Path_841.svg"></a>
+							<a href="delivery_po_no_address.html" style="float:right"  class="btn btn-primary1">Proceed &nbsp <img src="images/ico/Path_841.svg"></a>
 						
 					
 						</div>
@@ -562,15 +592,17 @@ label::before {
                     
 					<div class="card" style="margin-top: 83px;">
 						<span class="card_content">Frequently Asked Questions</span>
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
+						 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   
                                         How is the purity of gold ensured?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                  
                                 </h4>
-                            </div>
+                            </div> 
+							</a>
                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -578,13 +610,14 @@ label::before {
                             </div>
                         </div>
                         <div class="panel panel-default">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <div class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                   
                                        What is the live gold price?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                    
                                 </h4>
-                            </div>
+                            </div></a>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -592,13 +625,14 @@ label::before {
                             </div>
                         </div>
                         <div class="panel panel-default">
+						  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             <div class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  
 										Where is my gold stored?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
-                            </div>
+                            </div> </a>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -607,13 +641,15 @@ label::before {
                         </div>
 						
 						<div class="panel panel-default">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             <div class="panel-heading" role="tab" id="headingFour">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                   
                                        How do I send or gift someone gold?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
                             </div>
+							 </a>
                             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -622,13 +658,14 @@ label::before {
                         </div>
 						
 						<div class="panel panel-default">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             <div class="panel-heading" role="tab" id="headingFive">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    
                                        Why should I use the Gold Savings Plan?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
-                            </div>
+                            </div> </a>
                             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -652,8 +689,8 @@ label::before {
     </section><!--/#about-->
 
     
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div id="myModal" class="modal fade  " role="dialog">
+  <div class="modal-dialog ">
 
     <!-- Modal content-->
     <div class="modal-content">
@@ -718,8 +755,8 @@ label::before {
       </div>
       </div>
       <div class="modal-footer" style="text-align:center">
-	  
-	  	<a href=" delivery_po_no_address.html" class="btn btn-primary1">Place order</a>
+	   	<a id="place_order" href=" delivery_po_no_address.html" style="display:none;" class="btn btn-primary1 ">Place order</a>
+
        
       </div>
       </div>
@@ -729,7 +766,7 @@ label::before {
 </div>
 
    
-
+	 
    
 <script src="js/jquery.js"></script>
     
@@ -746,35 +783,109 @@ label::before {
 	<script>
 	$(document).ready(function(){
 
+   $('#cb1').click(function(){
+      if($(this).is(':checked')) 
+			{   
+			   var quantity = parseInt($('#quantity1').val(1));
+				
+			}
+			else
+			{
+			 var quantity = parseInt($('#quantity1').val(0));
+			}
+		});
+	   $('#cb2').click(function(){
+	     if($(this).is(':checked')) 
+				{
+				   var quantity = parseInt($('#quantity2').val(1));
+					
+				}
+						else
+				{
+				 var quantity = parseInt($('#quantity2').val(0));
+				}
+
+		});
+	
+	   $('#cb3').click(function(){
+			if($(this).is(':checked')) 
+				{
+				   var quantity = parseInt($('#quantity3').val(1));
+					
+				}
+						else
+				{
+				 var quantity = parseInt($('#quantity3').val(0));
+				}
+	
+
+	
+
+	});
+	
+	
+	   $('#cb4').click(function(){
+			 if($(this).is(':checked')) 
+				{
+				   var quantity = parseInt($('#quantity4').val(1));
+					
+				}
+						else
+				{
+				 var quantity = parseInt($('#quantity4').val(0));
+				}
+	
+
+	});
+
 var quantitiy=0;
+
+
+
    $('.add_qty').click(function(){
-        
+     
         //e.preventDefault();
 		
 		var id = $(this).data("attr");
-    
+     	var check_id = $(this).data("attr2");
+		
         var quantity = parseInt($('#'+id).val());
-   
-     $('#'+id).val(quantity + 1);
-
-          
-       
-        
-
+	
+     
+		$('#'+id).val(quantity + 1);
+		
+	$('#'+check_id).prop('checked',true);     
     });
 
      $('.remove_qty').click(function(){
        
       
      	var id = $(this).data("attr");
+     	var check_id = $(this).data("attr2");
+	
         var quantity = parseInt($('#'+id).val());
 
-            if(quantity>0)
+            if(quantity > 0)
 			{
 				$('#'+id).val(quantity - 1);
-            }
+			if(quantity==1)
+			{
+			$('#'+check_id).prop('checked',false);     
+			}
+
+            } 
+			else if(quantity==0)
+			{
+			
+				$('#'+check_id).prop('checked',false);     
+			}
+			 else 
+			{
+			
+				$('#'+check_id).prop('checked',false);     
+			}
     });
-    
+
 });
 	</script>
 	

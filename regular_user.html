@@ -159,6 +159,137 @@
 				
 		}
 		}
+		
+		
+		<style>
+		.logo_mobile, .page_user
+		{
+			display:none;
+		}
+		.learn_more_buy.mobile , .embed-responsive.embed-responsive-16by9.mobile
+		{
+			display:none;
+		}
+	
+		.mark1
+		{
+			margin-bottom:50px;
+		}
+		.savings_plan
+		{
+			margin-top:15px!important;
+		}
+		.welcome_row
+		{
+			display:none;
+		}
+		.welcome_row h3
+		{
+			font-size:20px;
+			
+		}
+		.mark1.success
+		{
+			display:none;
+		}
+		@media (max-width: 767px)
+		{
+		.learn_more_buy, .learn_more_with_arrow, .embed-responsive.embed-responsive-16by9, ul.nostyle
+		{
+				display:none;
+		}
+		.learn_more_buy.mobile , .embed-responsive.embed-responsive-16by9.mobile
+		{
+			display:block!important;
+		}
+		.welcome_row h3 {
+				font-size: 20px;
+				margin-top: 35px;
+				margin-bottom: 40px;
+			}
+		.mark_padding
+		{
+			padding-right: 15px!important;
+			
+		}
+		.navbar-default {
+		background-color: #00AFA7;
+		}
+		.mark1.welcome
+		{
+			
+			border-radius: 0px!important;
+			padding: 15px;
+			min-height: 205px!important;
+			height: 220px!important;
+			background-position-y: -50px;
+			background-repeat: no-repeat;
+			box-shadow:none;
+			background-size: auto;
+			margin-bottom: 0px;
+		}
+		.welcome_row
+		{
+				display:block;
+		}
+		.mark1.original
+		{
+				display:none!important;
+				
+		}
+		.mark1.success
+		{
+			    background-image: none;
+				display: block;
+				border-radius: 5px;
+				height: auto!important;
+				    min-height: 130px!important;
+				margin: 0px;
+				/* margin-top: 62px; */
+			    padding-top: 30px;
+			    
+		}
+		 .mark1.success h3
+		{
+			font-size:18px;
+			color:#333333;
+			    font-family: 'Sarabun Semibold';
+			margin-top: 0px;
+			margin-bottom: 5px;
+		}
+		.mark1.success span
+		{
+			font-size:12px;
+			color:#999999;
+		}
+		.text, .buy_content
+		{
+			display:none;
+		}
+		.navbar-toggle
+		{
+			    background-color: transparent;
+		}
+		.navbar-default .navbar-toggle .icon-bar 
+		{
+			background-color: #fff!important;
+		}
+		.logo_mobile
+		{
+			display:inline-block;
+		}
+		.logo_website, .desktop_head
+		{
+			display:none;
+		}
+		.page_user
+		{
+			display:block;
+			text-align:right;
+			float:right;
+		}
+		
+		}
 	</style>
 	
 </head><!--/head-->
@@ -176,8 +307,8 @@
                         <span class="icon-bar"></span>
                     </button>
                    <a class="navbar-brand logo_website" href="index.html"><img src="images/logo.svg" alt="logo"></a>
-					<a class="navbar-brand logo_mobile" href="index.html"><img src="images/ico/logo-full.svg" alt="logo"></a>
-					  <a class="navbar-brand page_user" href="index.html"><span ><img src="images/ico/user_white.svg" ></span> </a>
+					<a class=" logo_mobile" href="index.html"><img src="images/ico/logo-full.svg" alt="logo"></a>
+					  <a class=" page_user" href="index.html"><span ><img src="images/ico/user_white.svg" ></span> </a>
                 </div>
 				
                <div class="collapse navbar-collapse">
@@ -239,9 +370,9 @@
 					
 					<div class="mark1 success">
 					 <h3 class="" style="color:#333333;">Send gold as a gift!  </h3>
-					 <a href="" style="float:right;margin-top:-10px;font-size:24px;color:#DECC62"class=""> &nbsp <img src="images/ico/Path_841.svg"> </a>
-					<span style="">Persuasive line to do with shagun?</span>
 					
+					<span style="width:100%">Persuasive line to do with shagun?</span>
+						<a href=""  style="float:right;text-align:right;font-size:14px">Get Started &nbsp <img src="images/ico/Path_85.svg"> </a>
 					
 					</div>
 				</div>
@@ -259,6 +390,7 @@
 					<h3 style="color:#fff;">Send the gift of gold!</h3>
 					<p class="buy_content" style="color:#fff;">Persuasive line to do with shagun?</p>
 				<a href=""><span class="learn_more_with_arrow" style="color:#fff">Send your first gift &nbsp <img src="images/ico/Path_841.svg"></span></a>
+			
 					
 					</div>
 					
@@ -290,7 +422,7 @@
 								<span class="card_content">Create your Gold Savings Plan</span>
 								<p class="desc">Get attractive gifts after completing 6 months.</p>
 								<div class="action">
-								<button type="submit"   class="btn btn-primary">Get started &nbsp <img src="images/ico/Path_841.svg"></button>
+								<button type="submit"   class="btn btn-primary1">Get started &nbsp <img src="images/ico/Path_841.svg"></button>
 								</div>
 								</div>
 
@@ -316,15 +448,17 @@
                             </ul>
 					<div class="card wow fadeInRight" data-wow-duration="1200ms" data-wow-delay="1200ms">
 						<span class="card_content">Frequently Asked Questions</span>
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
+						 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   
                                         How is the purity of gold ensured?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                  
                                 </h4>
-                            </div>
+                            </div> 
+							</a>
                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -332,13 +466,14 @@
                             </div>
                         </div>
                         <div class="panel panel-default">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <div class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                   
                                        What is the live gold price?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                    
                                 </h4>
-                            </div>
+                            </div></a>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -346,13 +481,14 @@
                             </div>
                         </div>
                         <div class="panel panel-default">
+						  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             <div class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  
 										Where is my gold stored?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
-                            </div>
+                            </div> </a>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -361,13 +497,15 @@
                         </div>
 						
 						<div class="panel panel-default">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             <div class="panel-heading" role="tab" id="headingFour">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                   
                                        How do I send or gift someone gold?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
                             </div>
+							 </a>
                             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -376,13 +514,14 @@
                         </div>
 						
 						<div class="panel panel-default">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             <div class="panel-heading" role="tab" id="headingFive">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    
                                        Why should I use the Gold Savings Plan?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
-                            </div>
+                            </div> </a>
                             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -417,7 +556,7 @@
 	</li>
 	
 	<li role="presentation" class="">
-	<a href="gift_intro.html" ><i class="fa fa-gift" ></i> <br> Gift</a>
+		<a href="gift_intro.html" ><img src="images/ico/gift_grey.svg" > <br> Gift</a>
 	</li>
 	
 	<li role="presentation" class="">
@@ -449,18 +588,16 @@
     $(window).on("resize", function (e) {
         checkScreenSize();
     });
-
-    checkScreenSize();
-
+  checkScreenSize();
     function checkScreenSize(){
         var newWindowWidth = $(window).width();
         if (newWindowWidth < 767) {
          $(window).scroll(function() {
         if ($(this).scrollTop() >= 50) {
-            $('.navbar-default').css({'box-shadow': '0 0 3px 0 rgba(0, 0, 0, 0.1)', 'background-color': ' #00BBB4'});
+            $('.navbar-default').css({'box-shadow': '0 0 3px 0 rgba(0, 0, 0, 0.1)', 'background-image': 'linear-gradient(to right, #00998E , #00BBB4)'});
         }
         else {
-           $('.navbar-default').css({'box-shadow': 'none', 'background-color': '#00BBB4'});
+           $('.navbar-default').css({'box-shadow': 'none','background-image': 'linear-gradient(to right, #00998E , #00BBB4)'});
         }
     });
         }
@@ -477,6 +614,7 @@
         }
     }
 });
+	
 	
 	
 	

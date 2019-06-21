@@ -21,13 +21,18 @@
     bottom: 0;
     right: 0;
     padding: 1px; }
+	
+	    .intl-tel-input .country-list .country {
+      padding: 5px 10px;
+	  display:block!important;
+      outline: none; }
   .intl-tel-input .selected-flag {
     z-index: 1;
     position: relative;
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 6px 0 8px; }
+    padding: 0px!important; }
     .intl-tel-input .selected-flag .iti-arrow {
       margin-left: 6px;
       width: 0;
@@ -69,6 +74,7 @@
       border-bottom: 1px solid #CCC; }
     .intl-tel-input .country-list .country {
       padding: 5px 10px;
+	  display:block!important;
       outline: none; }
       .intl-tel-input .country-list .country .dial-code {
         color: #999; }
@@ -94,7 +100,7 @@
     .intl-tel-input.allow-dropdown input[disabled] + .flag-container:hover .selected-flag, .intl-tel-input.allow-dropdown input[readonly] + .flag-container:hover .selected-flag {
       background-color: transparent; }
   .intl-tel-input.separate-dial-code .selected-flag {
-    background-color: rgba(0, 0, 0, 0.05); }
+    background-color:transparent; }
   .intl-tel-input.separate-dial-code .selected-dial-code {
     margin-left: 6px; }
   .intl-tel-input.iti-container {
@@ -111,6 +117,7 @@
   bottom: 30px;
   left: 30px;
   right: 30px;
+  display:block;
   position: fixed; }
 
 .iti-mobile .intl-tel-input .country-list {

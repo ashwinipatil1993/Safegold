@@ -99,7 +99,49 @@
     <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
-   
+   <script>
+   	$(document).ready(function(){ 
+	var interval;
+ $('.time').text("1:00");
+  countdown();
+function countdown() {
+  clearInterval(interval);
+  interval = setInterval( function() {
+      var timer = $('.time').html();
+      timer = timer.split(':');
+      var minutes = timer[0];
+      var seconds = timer[1];
+      seconds -= 1;
+      if (minutes < 0) return
+	 
+      else if (seconds < 0 && minutes != 0) {
+          minutes -= 1;
+          seconds = 59;
+		    
+
+      }
+      else if (seconds < 10 && length.seconds !=1) seconds = '0' + seconds;
+
+      $('.time').html(minutes + ':' + seconds);
+	
+      if (minutes == 0 && seconds == 0)
+		  clearInterval(interval)
+		   ($('#js-resetTimer span').css("opacity", "1"));
+		   
+  }, 1000);
+}
+
+$('#js-startTimer').click(function () {
+  $('.time').text("1:00");
+  countdown();
+});
+
+$('#js-resetTimer').click(function () {
+  $('.js-timeout').text("1:00");
+  clearInterval(interval);
+});
+	});
+   </script>
 
    
 

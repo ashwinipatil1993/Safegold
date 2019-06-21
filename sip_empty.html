@@ -59,13 +59,14 @@
 		}
 		@media (max-width: 767px)
 		{
-		.learn_more_buy, .learn_more_with_arrow, .embed-responsive.embed-responsive-16by9, ul.nostyle
+		.learn_more_with_arrow, ul.nostyle
 		{
 				display:none;
 		}
-		.learn_more_buy.mobile , .embed-responsive.embed-responsive-16by9.mobile
+			.embed-responsive.embed-responsive-16by9
 		{
-			display:block!important;
+			width:100%!important;
+			margin-top:24px
 		}
 		.mark_padding
 		{
@@ -75,14 +76,19 @@
 		.navbar-default {
 		background-color: #00AFA7;
 		}
-		.mark1.welcome
+			.mark1.welcome
 		{
-			
-			border-radius:0px!important;
-			padding:15px;
-			min-height: 170px!important;
-			height: 170px!important;
-			
+
+			border-radius: 0px!important;
+			padding: 15px;
+			min-height: 205px!important;
+			height: 220px!important;
+			background-position-y: -50px;
+			background-repeat: no-repeat;
+			box-shadow:none;
+			background-size: auto;
+			margin-bottom: 0px;
+
 		}
 		.welcome_row
 		{
@@ -95,18 +101,21 @@
 		}
 		.mark1.success
 		{
-			background-image: none;
+						background-image: none;
 			display: block;
+			border-radius: 5px;
 			height: auto!important;
-			min-height: 85px!important;
+			min-height: 113px!important;
 			margin: 0px;
-			margin-top:0px;
+			/* margin-top: 62px; */
+			padding-top: 30px;
 			    
 		}
 		 .mark1.success h3
 		{
 			font-size:18px;
 			color:#333333;
+			font-family: 'Sarabun Semibold';
 			margin-top: 0px;
 		}
 		.mark1.success span
@@ -126,11 +135,13 @@
 		{
 			background-color: #fff!important;
 		}
-		.logo_mobile
+		.page_name
 		{
-			display:inline-block;
-		}
-		.logo_website, .desktop_head
+			
+				color:#FFFFFF;
+				font-size:18px;
+				font-family: 'Sarabun Semibold';
+		}		.logo_website, .desktop_head
 		{
 			display:none;
 		}
@@ -150,10 +161,12 @@
 				font-family: 'Sarabun';
 				color:#FFFFFF;
 				opacity:0.6;
+				margin-bottom:0px;
 		}
 		.net_weight.mobile
 		{
 				color:#FFFFFF;
+				margin-top: 5px;
 				font-size:24px;
 				font-family: 'Sarabun Light';
 				
@@ -176,8 +189,8 @@
                         <span class="icon-bar"></span>
                     </button>
                    <a class="navbar-brand logo_website" href="index.html"><img src="images/logo.svg" alt="logo"></a>
-					<a class="navbar-brand logo_mobile" href="index.html"><img src="images/ico/logo-full.svg" alt="logo"></a>
-					  <a class="navbar-brand page_user" href="index.html"><span ><img src="images/ico/user_white.svg" ></span> </a>
+					<a class=" page_name" href="index.html">Gold Savings Plan</a>
+					  <a class=" page_user" href="index.html"><span ><img src="images/ico/user_white.svg" ></span> </a>
                 </div>
 				
                <div class="collapse navbar-collapse">
@@ -249,7 +262,7 @@
 
             <div class="row">
                 <div class="col-sm-8 mark_padding wow fadeInLeft" style="padding-right:40px" >
-                
+                <h2 class="desktop_head" style="color:#333333;margin-bottom:30px;">Gold Savings Plans</h2>
 					
 					<p class="balance desktop">Gold Accumulated</p>
 					
@@ -261,22 +274,38 @@
 					
 					</div>
 					
-					<div class="learn_more_buy mobile">Learn More</div>
-					
-                    <div class="embed-responsive embed-responsive-16by9 mobile" style="width:340px;	height:200px;">
-                        <iframe src="https://www.youtube.com/embed/XH7OShyZ1Ek" style="width:340px;	height:200px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				
+				  <div class="row">
+				  
+					  <div class="col-sm-6  wow fadeInLeft" style="" >
+						<div class="learn_more_buy ">Learn More</div>
+							<div class="embed-responsive embed-responsive-16by9 " style="width:340px;	height:200px;border-radius:5px;">
+								<iframe src="https://www.youtube.com/embed/XH7OShyZ1Ek" style="width:340px;	height:200px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+							<ul class="nostyle" style="margin-top:20px" data-wow-duration="1000ms" data-wow-delay="1000ms">
+                                <li><img src="images/ico/play-button-inside-a-circle.svg"> &nbsp How does Digital Gold work? <span style="color:#999999"> (3:23) </span></li>
+                                <li><img src="images/ico/play-button-inside-a-circle.svg"> &nbsp How does Digital Gold work? <span style="color:#999999"> (3:23) </span></li>
+                            </ul>							
                     </div>	
+					
+				
+					 <div class="col-sm-6 wow fadeInLeft" style="" >
+                    <div class="embed-responsive embed-responsive-16by9" style="width:340px;	height:200px;border-radius:5px;">
+                        <iframe src="https://www.youtube.com/embed/XH7OShyZ1Ek" style="width:340px;	height:200px;border-radius:5px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+					<ul class="nostyle" style="margin-top:20px" data-wow-duration="1000ms" data-wow-delay="1000ms">
+                                <li><img src="images/ico/play-button-inside-a-circle.svg"> &nbsp How does Digital Gold work? <span style="color:#999999"> (3:23) </span></li>
+                                <li><img src="images/ico/play-button-inside-a-circle.svg"> &nbsp How does Digital Gold work? <span style="color:#999999"> (3:23) </span></li>
+                     </ul>
+                    </div>
+                    </div>
 					
 					
 				
                 </div>
 
                 <div class="col-sm-4 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="1000ms">
-                    <div class="learn_more_buy">Learn more</div>
-					
-                    <div class="embed-responsive embed-responsive-16by9" style="width:340px;	height:200px;border-radius:5px;">
-                        <iframe src="https://www.youtube.com/embed/XH7OShyZ1Ek" style="width:340px;	height:200px;border-radius:5px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
+               
 					
 						
 					<div class="card wow fadeInRight" data-wow-duration="1200ms" data-wow-delay="1200ms">

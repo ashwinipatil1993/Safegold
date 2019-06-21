@@ -71,15 +71,15 @@ display: block;
 @media (max-width: 767px)
 	{
 	
-	.btn.btn-primary
+	.btn.btn-primary1
 	
 	{
-		box-shadow: 0px 13px 6px -7px #fbf9f4;
+		box-shadow:0 5px 20px -15px rgb(0,0,0,0.1)
 	}
 		.mark1
 		{
-			    background-image:linear-gradient(to right, #00998E , #00BBB4);
-				max-height: 100%;
+			       background: #00BBB4;
+					max-height: 100%;
 				    height: 330px;
 					margin-bottom:20px;
 			
@@ -88,8 +88,12 @@ display: block;
 		{
 			padding-right: 15px!important;
 			background:#fff;
+			    padding-top: 60px;
 			
 		}
+		#about {
+					 padding: 0px; 
+				}
 		.mark_padding h2
 		{
 			display:none!important;
@@ -126,9 +130,13 @@ display: block;
 		}
 		.trend
 		{
-				color:#BF9F41;
-				margin-top: 20px;
-				text-align:center;
+			color: #BF9F41;
+			margin-top: 0px;
+			padding: 10px 0px;
+			margin-left: -15px;
+			margin-right: -15px;
+			text-align: center;
+			background: #fff;
 		}
 		.measurement::after
 		{
@@ -147,8 +155,8 @@ display: block;
 			font-size:18px;
 			font-family: 'Sarabun Semibold';
 			margin:0px auto;
-			width: 60%;
-			display: block!important;
+		
+			display: inline-block!important;
 			text-align: center;
 		}
 		.page_logo
@@ -194,8 +202,8 @@ display: block;
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand page_logo" href="index.html"><img src="images/logo.svg" alt="logo"></a>
-                    <a class="navbar-brand page_name" href="index.html">Buy Gold </a>
-                    <a class="navbar-brand page_user" href="index.html"><span><img src="images/ico/user_mob.svg" ></span> </a>
+                    <a class=" page_name" href="index.html">Buy Gold </a>
+                    <a class=" page_user" href="index.html"><span><img src="images/ico/user_mob.svg" ></span> </a>
 					
                 </div>
 				
@@ -328,15 +336,17 @@ display: block;
 							
 					<div class="card wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="1000ms">
 						<span class="card_content">Frequently Asked Questions</span>
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
+						 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   
                                         How is the purity of gold ensured?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                  
                                 </h4>
-                            </div>
+                            </div> 
+							</a>
                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -344,13 +354,14 @@ display: block;
                             </div>
                         </div>
                         <div class="panel panel-default">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <div class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                   
                                        What is the live gold price?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                    
                                 </h4>
-                            </div>
+                            </div></a>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -358,13 +369,14 @@ display: block;
                             </div>
                         </div>
                         <div class="panel panel-default">
+						  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             <div class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  
 										Where is my gold stored?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
-                            </div>
+                            </div> </a>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -373,13 +385,15 @@ display: block;
                         </div>
 						
 						<div class="panel panel-default">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             <div class="panel-heading" role="tab" id="headingFour">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                   
                                        How do I send or gift someone gold?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
                             </div>
+							 </a>
                             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -388,13 +402,14 @@ display: block;
                         </div>
 						
 						<div class="panel panel-default">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             <div class="panel-heading" role="tab" id="headingFive">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    
                                        Why should I use the Gold Savings Plan?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
-                            </div>
+                            </div> </a>
                             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -432,7 +447,7 @@ display: block;
 	</li>
 	
 	<li role="presentation" class="">
-		<a href="gift_intro.html" ><i class="fa fa-gift" ></i> <br> Gift</a>
+		<a href="gift_intro.html" ><img src="images/ico/gift_grey.svg" > <br> Gift</a>
 	</li>
 	
 	<li role="presentation" class="">

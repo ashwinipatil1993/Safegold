@@ -26,6 +26,38 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 	<style>
+	
+	.tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 24%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+ .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+#tooltip:hover .tooltiptext {
+  visibility: visible!important;
+  opacity: 1!important;
+}
 	.home_icon
 	{
 		display:none;
@@ -95,6 +127,10 @@
 		{
 			display:none;
 		}
+		.track
+		{
+			display:none;
+		}
 		#about
 		{
 				padding-top:15px;
@@ -148,7 +184,7 @@
 		}
 		
 		
-		.btn.btn-primary
+		.btn.btn-primary1
 		{
 		    background: #fff;
 			border-color: #fff;
@@ -173,6 +209,7 @@
 			color: #333333!important;
 			font-family: 'Sarabun SemiBold'!important;
 			font-size: 16px!important;
+			    margin-bottom: 0px;
 		}
 		.success_buy
 		{
@@ -197,6 +234,7 @@
 			height: 48px;
 			    line-height: 40px;
 				display:block!important;
+				margin-bottom:15px;
 		}
 		.check_crl.desk
 		{
@@ -247,6 +285,8 @@
 			.mobile_data
 			{
 				display:block!important;
+				margin-bottom:15px;
+				margin-top:15px;
 			}
 			
 			
@@ -361,14 +401,14 @@
 								<div class="promo_code " style="display: block;">
 								
 								<div class="discription " style="display:inline-block;width:100%">
-								<div class="pull-left code" style="display:inline-block"><input type="text"  id="copy_link" placeholder="https://sfgld.in/gaurav9419a"></div><div class="pull-right apply" style="display:inline-block;cursor:pointer"><input type="button" name="view" value="Copy" class="apply" onclick="copy_node_token()" /></div><p></p>
+								<div class="pull-left code" style="display:inline-block"><input type="text"  id="copy_link" placeholder="https://sfgld.in/gaurav9419a"></div><div class="pull-right apply" id="tooltip" style="display:inline-block;cursor:pointer"><input type="button" name="view" value="Copy" class="apply" onclick="copy_node_token()" onmouseout="outFunc()" /> </div><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
 								
 							
 								</div>
 								</div>
 								
 								<div class="action " style="text-align:center;width:35%;  margin-top: 15px;">
-											<a href="#" class="btn btn-primary1"><i class="fa fa-share-alt"></i> &nbsp Share Link</a>
+											<a href="#" class="btn btn-primary1"><img src="images/ico/Group_984.svg">&nbsp Share Link</a>
 										</div>
 								</div>
 								
@@ -405,15 +445,17 @@
 							
 				<div class="card wow fadeInRight" data-wow-duration="1200ms" data-wow-delay="1200ms">
 						<span class="card_content">Frequently Asked Questions</span>
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
+						 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   
                                         How is the purity of gold ensured?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                  
                                 </h4>
-                            </div>
+                            </div> 
+							</a>
                             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -421,13 +463,14 @@
                             </div>
                         </div>
                         <div class="panel panel-default">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <div class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                   
                                        What is the live gold price?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                    
                                 </h4>
-                            </div>
+                            </div></a>
                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -435,13 +478,14 @@
                             </div>
                         </div>
                         <div class="panel panel-default">
+						  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             <div class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  
 										Where is my gold stored?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
-                            </div>
+                            </div> </a>
                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -450,13 +494,15 @@
                         </div>
 						
 						<div class="panel panel-default">
+						 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                             <div class="panel-heading" role="tab" id="headingFour">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                   
                                        How do I send or gift someone gold?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
                             </div>
+							 </a>
                             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -465,13 +511,14 @@
                         </div>
 						
 						<div class="panel panel-default">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             <div class="panel-heading" role="tab" id="headingFive">
                                 <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    
                                        Why should I use the Gold Savings Plan?<span style="float:right"><img src="images/ico/keyboard-right-arrow-button.svg"></span>
-                                    </a>
+                                   
                                 </h4>
-                            </div>
+                            </div> </a>
                             <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                                 <div class="panel-body">
                                     Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
@@ -522,9 +569,14 @@
   copyText.select();
 
   document.execCommand("copy");
+    var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
 
 }
-
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
 
 </script>
 </body>
